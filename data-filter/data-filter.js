@@ -3,6 +3,9 @@ const fs = require('fs');
 const results = [];
 
 const writeStream = fs.createWriteStream('./formatted-data.json')
+
+writeStream.on('close', () =>
+    console.log('Data formatted en written to formatted-data.json'))
 fs.createReadStream('./dataset.csv')
     .pipe(csv({separator: ';'}))
     .on('data', (data) => results.push(data))
@@ -12,9 +15,16 @@ fs.createReadStream('./dataset.csv')
 
         countNumberOfMedals(sortedData);
 
-        const modifiedArray = sortedData.map(({noc, years}) => ({
+        const modifiedArray = sortedData.map(
+            ({noc, years}) => ({
                 noc,
-                years: years.map(({year, eventsWithGoldenMedal, eventsWithSilverMedal, eventsWithBronzeMedal}) => ({year, eventsWithGoldenMedal, eventsWithSilverMedal, eventsWithBronzeMedal}))
+                years: years.map(
+                    ({year, eventsWithGoldenMedal, eventsWithSilverMedal, eventsWithBronzeMedal}) => ({
+                        year,
+                        g: eventsWithGoldenMedal.length,
+                        s: eventsWithSilverMedal.length,
+                        b: eventsWithBronzeMedal.length
+                    }))
             })
         )
 
