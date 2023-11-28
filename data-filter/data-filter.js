@@ -3,7 +3,7 @@ const fs = require('fs');
 const results = [];
 
 const writeStream = fs.createWriteStream('./formatted-data.json')
-
+writeStream.on('error', (err) => console.log(err))
 writeStream.on('close', () =>
     console.log('Data formatted en written to formatted-data.json'))
 fs.createReadStream('./dataset.csv')
