@@ -2,10 +2,10 @@ const csv = require('csv-parser')
 const fs = require('fs');
 const results = [];
 
-const writeStream = fs.createWriteStream('./formatted-data.json')
-writeStream.on('error', (err) => console.log(err))
-writeStream.on('close', () =>
-    console.log('Data formatted en written to formatted-data.json'))
+const writeStream = fs.createWriteStream('../test.1/public/formatted-data.json')
+    .on('error', (err) => console.log(err))
+    .on('close', () => console.log('Data formatted en written to formatted-data.json'))
+
 fs.createReadStream('./dataset.csv')
     .pipe(csv({separator: ';'}))
     .on('data', (data) => results.push(data))
@@ -19,8 +19,9 @@ fs.createReadStream('./dataset.csv')
             ({noc, years}) => ({
                 noc,
                 years: years.map(
-                    ({year, eventsWithGoldenMedal, eventsWithSilverMedal, eventsWithBronzeMedal}) => ({
+                    ({year, season, eventsWithGoldenMedal, eventsWithSilverMedal, eventsWithBronzeMedal}) => ({
                         year,
+                        season,
                         g: eventsWithGoldenMedal.length,
                         s: eventsWithSilverMedal.length,
                         b: eventsWithBronzeMedal.length
@@ -47,6 +48,7 @@ function sortPerYear(data) {
             if (year) year.participants.push(data[i])
             else noc.years.push({
                 year: data[i].year,
+                season: data[i].season,
                 participants: [data[i]]
             })
         } else {
@@ -54,6 +56,7 @@ function sortPerYear(data) {
                 noc: data[i].noc,
                 years: [{
                     year: data[i].year,
+                    season: data[i].season,
                     participants: [data[i]]
                 }]
             })
