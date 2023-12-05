@@ -30,7 +30,6 @@ d3.json('/formatted-data.json').then((data: any) => {
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(xScale));
 
-// add the y Axis
     const yScale = d3.scaleLinear()
         .domain([0, d3.max(years, d => d.g + d.s + d.b) ])
         .range([height, 0])
