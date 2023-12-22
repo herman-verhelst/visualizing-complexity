@@ -21,7 +21,6 @@ d3.json('/formatted-data.json').then((data: any) => {
     const years = usa.years.filter(data => data.season === 'Summer')
     console.log(years)
 
-
     const xScale = d3.scaleLinear()
         .domain(d3.extent(years, d => d.year))
         .range([0, width]);
@@ -57,14 +56,11 @@ d3.json('/formatted-data.json').then((data: any) => {
         .y1(d => yScale(d.g + d.s + d.b))
         .curve(d3.curveBumpX)
 
-    const lines = svg.selectAll("lines")
+    svg.selectAll("lines")
         .data([years])
         .join("path")
         .attr("class", "area")
         .attr("stroke-width", 2)
         .attr("fill", "url(#area-gradient)")
         .attr("d", area)
-
-
-
 })

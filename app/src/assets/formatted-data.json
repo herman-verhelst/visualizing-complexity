@@ -1,0 +1,2374 @@
+[
+  {
+    "edition": "1",
+    "year": "1903",
+    "distance": 2428,
+    "totalStages": 6,
+    "stageWins": 3,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 2,
+      "minutes": 59,
+      "seconds": 21
+    },
+    "time": {
+      "hours": 94,
+      "minutes": 33,
+      "seconds": 14
+    },
+    "winner": {
+      "name": "Maurice Garin",
+      "nationality": "France",
+      "team": "La Française"
+    }
+  },
+  {
+    "edition": "2",
+    "year": "1904",
+    "distance": 2428,
+    "totalStages": 6,
+    "stageWins": 1,
+    "stagesLed": 3,
+    "margin": {
+      "hours": 2,
+      "minutes": 16,
+      "seconds": 14
+    },
+    "time": {
+      "hours": 96,
+      "minutes": 5,
+      "seconds": 55
+    },
+    "winner": {
+      "name": "Henri Cornet",
+      "nationality": "France",
+      "team": "Conte"
+    }
+  },
+  {
+    "edition": "3",
+    "year": "1905",
+    "distance": 2994,
+    "totalStages": 11,
+    "stageWins": 5,
+    "stagesLed": 10,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "Louis Trousselier",
+      "nationality": "France",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "4",
+    "year": "1906",
+    "distance": 4637,
+    "totalStages": 13,
+    "stageWins": 5,
+    "stagesLed": 12,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "René Pottier",
+      "nationality": "France",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "5",
+    "year": "1907",
+    "distance": 4488,
+    "totalStages": 14,
+    "stageWins": 2,
+    "stagesLed": 5,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "Lucien Petit-Breton",
+      "nationality": "France",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "6",
+    "year": "1908",
+    "distance": 4497,
+    "totalStages": 14,
+    "stageWins": 5,
+    "stagesLed": 13,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "Lucien Petit-Breton",
+      "nationality": "France",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "7",
+    "year": "1909",
+    "distance": 4498,
+    "totalStages": 14,
+    "stageWins": 6,
+    "stagesLed": 13,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "François Faber",
+      "nationality": "Luxembourg",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "8",
+    "year": "1910",
+    "distance": 4734,
+    "totalStages": 15,
+    "stageWins": 4,
+    "stagesLed": 3,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "Octave Lapize",
+      "nationality": "France",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "9",
+    "year": "1911",
+    "distance": 5343,
+    "totalStages": 15,
+    "stageWins": 2,
+    "stagesLed": 13,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "Gustave Garrigou",
+      "nationality": "France",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "10",
+    "year": "1912",
+    "distance": 5289,
+    "totalStages": 15,
+    "stageWins": 3,
+    "stagesLed": 13,
+    "margin": "Invalid input",
+    "time": "Invalid input",
+    "winner": {
+      "name": "Odile Defraye",
+      "nationality": "Belgium",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "11",
+    "year": "1913",
+    "distance": 5287,
+    "totalStages": 15,
+    "stageWins": 1,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 8,
+      "seconds": 8
+    },
+    "time": {
+      "hours": 197,
+      "minutes": 54,
+      "seconds": 0
+    },
+    "winner": {
+      "name": "Philippe Thys",
+      "nationality": "Belgium",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "12",
+    "year": "1914",
+    "distance": 5380,
+    "totalStages": 15,
+    "stageWins": 1,
+    "stagesLed": 15,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 200,
+      "minutes": 28,
+      "seconds": 48
+    },
+    "winner": {
+      "name": "Philippe Thys",
+      "nationality": "Belgium",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "13",
+    "year": "1919",
+    "distance": 5560,
+    "totalStages": 15,
+    "stageWins": 1,
+    "stagesLed": 2,
+    "margin": {
+      "hours": 1,
+      "minutes": 42,
+      "seconds": 54
+    },
+    "time": {
+      "hours": 231,
+      "minutes": 7,
+      "seconds": 15
+    },
+    "winner": {
+      "name": "Firmin Lambot",
+      "nationality": "Belgium",
+      "team": "La Sportive"
+    }
+  },
+  {
+    "edition": "14",
+    "year": "1920",
+    "distance": 5503,
+    "totalStages": 15,
+    "stageWins": 4,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 57,
+      "seconds": 57
+    },
+    "time": {
+      "hours": 228,
+      "minutes": 36,
+      "seconds": 13
+    },
+    "winner": {
+      "name": "Philippe Thys",
+      "nationality": "Belgium",
+      "team": "La Sportive"
+    }
+  },
+  {
+    "edition": "15",
+    "year": "1921",
+    "distance": 5485,
+    "totalStages": 15,
+    "stageWins": 2,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 18,
+      "seconds": 18
+    },
+    "time": {
+      "hours": 221,
+      "minutes": 50,
+      "seconds": 26
+    },
+    "winner": {
+      "name": "Léon Scieur",
+      "nationality": "Belgium",
+      "team": "La Sportive"
+    }
+  },
+  {
+    "edition": "16",
+    "year": "1922",
+    "distance": 5375,
+    "totalStages": 15,
+    "stageWins": 0,
+    "stagesLed": 3,
+    "margin": {
+      "hours": 0,
+      "minutes": 41,
+      "seconds": 41
+    },
+    "time": {
+      "hours": 222,
+      "minutes": 8,
+      "seconds": 6
+    },
+    "winner": {
+      "name": "Firmin Lambot",
+      "nationality": "Belgium",
+      "team": "Peugeot–Wolber"
+    }
+  },
+  {
+    "edition": "17",
+    "year": "1923",
+    "distance": 5386,
+    "totalStages": 15,
+    "stageWins": 3,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 0,
+      "minutes": 30,
+      "seconds": 30
+    },
+    "time": {
+      "hours": 222,
+      "minutes": 15,
+      "seconds": 30
+    },
+    "winner": {
+      "name": "Henri Pélissier",
+      "nationality": "France",
+      "team": "Automoto–Hutchinson"
+    }
+  },
+  {
+    "edition": "18",
+    "year": "1924",
+    "distance": 5425,
+    "totalStages": 15,
+    "stageWins": 4,
+    "stagesLed": 15,
+    "margin": {
+      "hours": 0,
+      "minutes": 35,
+      "seconds": 35
+    },
+    "time": {
+      "hours": 226,
+      "minutes": 18,
+      "seconds": 21
+    },
+    "winner": {
+      "name": "Ottavio Bottecchia",
+      "nationality": "Italy",
+      "team": "Automoto"
+    }
+  },
+  {
+    "edition": "19",
+    "year": "1925",
+    "distance": 5440,
+    "totalStages": 18,
+    "stageWins": 4,
+    "stagesLed": 13,
+    "margin": {
+      "hours": 0,
+      "minutes": 54,
+      "seconds": 54
+    },
+    "time": {
+      "hours": 219,
+      "minutes": 10,
+      "seconds": 18
+    },
+    "winner": {
+      "name": "Ottavio Bottecchia",
+      "nationality": "Italy",
+      "team": "Automoto–Hutchinson"
+    }
+  },
+  {
+    "edition": "20",
+    "year": "1926",
+    "distance": 5745,
+    "totalStages": 17,
+    "stageWins": 2,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 1,
+      "minutes": 22,
+      "seconds": 25
+    },
+    "time": {
+      "hours": 238,
+      "minutes": 44,
+      "seconds": 25
+    },
+    "winner": {
+      "name": "Lucien Buysse",
+      "nationality": "Belgium",
+      "team": "Automoto–Hutchinson"
+    }
+  },
+  {
+    "edition": "21",
+    "year": "1927",
+    "distance": 5398,
+    "totalStages": 24,
+    "stageWins": 3,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 1,
+      "minutes": 48,
+      "seconds": 41
+    },
+    "time": {
+      "hours": 198,
+      "minutes": 16,
+      "seconds": 42
+    },
+    "winner": {
+      "name": "Nicolas Frantz",
+      "nationality": "Luxembourg",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "22",
+    "year": "1928",
+    "distance": 5476,
+    "totalStages": 22,
+    "stageWins": 5,
+    "stagesLed": 22,
+    "margin": {
+      "hours": 0,
+      "minutes": 50,
+      "seconds": 50
+    },
+    "time": {
+      "hours": 192,
+      "minutes": 48,
+      "seconds": 58
+    },
+    "winner": {
+      "name": "Nicolas Frantz",
+      "nationality": "Luxembourg",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "23",
+    "year": "1929",
+    "distance": 5286,
+    "totalStages": 22,
+    "stageWins": 1,
+    "stagesLed": 16,
+    "margin": {
+      "hours": 0,
+      "minutes": 44,
+      "seconds": 44
+    },
+    "time": {
+      "hours": 186,
+      "minutes": 39,
+      "seconds": 15
+    },
+    "winner": {
+      "name": "Maurice De Waele",
+      "nationality": "Belgium",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "24",
+    "year": "1930",
+    "distance": 4822,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 13,
+    "margin": {
+      "hours": 0,
+      "minutes": 14,
+      "seconds": 14
+    },
+    "time": {
+      "hours": 172,
+      "minutes": 12,
+      "seconds": 16
+    },
+    "winner": {
+      "name": "André Leducq",
+      "nationality": "France",
+      "team": "Alcyon–Dunlop"
+    }
+  },
+  {
+    "edition": "25",
+    "year": "1931",
+    "distance": 5091,
+    "totalStages": 24,
+    "stageWins": 1,
+    "stagesLed": 16,
+    "margin": {
+      "hours": 0,
+      "minutes": 12,
+      "seconds": 12
+    },
+    "time": {
+      "hours": 177,
+      "minutes": 10,
+      "seconds": 3
+    },
+    "winner": {
+      "name": "Antonin Magne",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "26",
+    "year": "1932",
+    "distance": 4479,
+    "totalStages": 21,
+    "stageWins": 6,
+    "stagesLed": 19,
+    "margin": {
+      "hours": 0,
+      "minutes": 24,
+      "seconds": 24
+    },
+    "time": {
+      "hours": 154,
+      "minutes": 11,
+      "seconds": 49
+    },
+    "winner": {
+      "name": "André Leducq",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "27",
+    "year": "1933",
+    "distance": 4395,
+    "totalStages": 23,
+    "stageWins": 3,
+    "stagesLed": 12,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 147,
+      "minutes": 51,
+      "seconds": 37
+    },
+    "winner": {
+      "name": "Georges Speicher",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "28",
+    "year": "1934",
+    "distance": 4470,
+    "totalStages": 24,
+    "stageWins": 3,
+    "stagesLed": 22,
+    "margin": {
+      "hours": 0,
+      "minutes": 27,
+      "seconds": 27
+    },
+    "time": {
+      "hours": 147,
+      "minutes": 13,
+      "seconds": 58
+    },
+    "winner": {
+      "name": "Antonin Magne",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "29",
+    "year": "1935",
+    "distance": 4338,
+    "totalStages": 27,
+    "stageWins": 3,
+    "stagesLed": 21,
+    "margin": {
+      "hours": 0,
+      "minutes": 17,
+      "seconds": 17
+    },
+    "time": {
+      "hours": 141,
+      "minutes": 23,
+      "seconds": 0
+    },
+    "winner": {
+      "name": "Romain Maes",
+      "nationality": "Belgium",
+      "team": "Belgium"
+    }
+  },
+  {
+    "edition": "30",
+    "year": "1936",
+    "distance": 4442,
+    "totalStages": 27,
+    "stageWins": 4,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 26,
+      "seconds": 26
+    },
+    "time": {
+      "hours": 142,
+      "minutes": 47,
+      "seconds": 32
+    },
+    "winner": {
+      "name": "Sylvère Maes",
+      "nationality": "Belgium",
+      "team": "Belgium"
+    }
+  },
+  {
+    "edition": "31",
+    "year": "1937",
+    "distance": 4415,
+    "totalStages": 31,
+    "stageWins": 3,
+    "stagesLed": 4,
+    "margin": {
+      "hours": 0,
+      "minutes": 7,
+      "seconds": 7
+    },
+    "time": {
+      "hours": 138,
+      "minutes": 58,
+      "seconds": 31
+    },
+    "winner": {
+      "name": "Roger Lapébie",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "32",
+    "year": "1938",
+    "distance": 4694,
+    "totalStages": 29,
+    "stageWins": 2,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 18,
+      "seconds": 18
+    },
+    "time": {
+      "hours": 148,
+      "minutes": 29,
+      "seconds": 12
+    },
+    "winner": {
+      "name": "Gino Bartali",
+      "nationality": "Italy",
+      "team": "Italy"
+    }
+  },
+  {
+    "edition": "33",
+    "year": "1939",
+    "distance": 4224,
+    "totalStages": 28,
+    "stageWins": 2,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 30,
+      "seconds": 30
+    },
+    "time": {
+      "hours": 132,
+      "minutes": 3,
+      "seconds": 17
+    },
+    "winner": {
+      "name": "Sylvère Maes",
+      "nationality": "Belgium",
+      "team": "Belgium"
+    }
+  },
+  {
+    "edition": "34",
+    "year": "1947",
+    "distance": 4642,
+    "totalStages": 21,
+    "stageWins": 3,
+    "stagesLed": 1,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 148,
+      "minutes": 11,
+      "seconds": 25
+    },
+    "winner": {
+      "name": "Jean Robic",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "35",
+    "year": "1948",
+    "distance": 4922,
+    "totalStages": 21,
+    "stageWins": 7,
+    "stagesLed": 9,
+    "margin": {
+      "hours": 0,
+      "minutes": 26,
+      "seconds": 26
+    },
+    "time": {
+      "hours": 147,
+      "minutes": 10,
+      "seconds": 36
+    },
+    "winner": {
+      "name": "Gino Bartali",
+      "nationality": "Italy",
+      "team": "Italy"
+    }
+  },
+  {
+    "edition": "36",
+    "year": "1949",
+    "distance": 4808,
+    "totalStages": 21,
+    "stageWins": 3,
+    "stagesLed": 5,
+    "margin": {
+      "hours": 0,
+      "minutes": 10,
+      "seconds": 10
+    },
+    "time": {
+      "hours": 149,
+      "minutes": 40,
+      "seconds": 49
+    },
+    "winner": {
+      "name": "Fausto Coppi",
+      "nationality": "Italy",
+      "team": "Italy"
+    }
+  },
+  {
+    "edition": "37",
+    "year": "1950",
+    "distance": 4773,
+    "totalStages": 22,
+    "stageWins": 3,
+    "stagesLed": 11,
+    "margin": {
+      "hours": 0,
+      "minutes": 9,
+      "seconds": 9
+    },
+    "time": {
+      "hours": 145,
+      "minutes": 36,
+      "seconds": 56
+    },
+    "winner": {
+      "name": "Ferdinand Kübler",
+      "nationality": "Switzerland",
+      "team": "Switzerland"
+    }
+  },
+  {
+    "edition": "38",
+    "year": "1951",
+    "distance": 4690,
+    "totalStages": 24,
+    "stageWins": 5,
+    "stagesLed": 11,
+    "margin": {
+      "hours": 0,
+      "minutes": 22,
+      "seconds": 22
+    },
+    "time": {
+      "hours": 142,
+      "minutes": 20,
+      "seconds": 14
+    },
+    "winner": {
+      "name": "Hugo Koblet",
+      "nationality": "Switzerland",
+      "team": "Switzerland"
+    }
+  },
+  {
+    "edition": "39",
+    "year": "1952",
+    "distance": 4898,
+    "totalStages": 23,
+    "stageWins": 5,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 28,
+      "seconds": 28
+    },
+    "time": {
+      "hours": 151,
+      "minutes": 57,
+      "seconds": 20
+    },
+    "winner": {
+      "name": "Fausto Coppi",
+      "nationality": "Italy",
+      "team": "Italy"
+    }
+  },
+  {
+    "edition": "40",
+    "year": "1953",
+    "distance": 4476,
+    "totalStages": 22,
+    "stageWins": 2,
+    "stagesLed": 5,
+    "margin": {
+      "hours": 0,
+      "minutes": 14,
+      "seconds": 14
+    },
+    "time": {
+      "hours": 129,
+      "minutes": 23,
+      "seconds": 25
+    },
+    "winner": {
+      "name": "Louison Bobet",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "41",
+    "year": "1954",
+    "distance": 4656,
+    "totalStages": 25,
+    "stageWins": 3,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 15,
+      "seconds": 15
+    },
+    "time": {
+      "hours": 140,
+      "minutes": 6,
+      "seconds": 5
+    },
+    "winner": {
+      "name": "Louison Bobet",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "42",
+    "year": "1955",
+    "distance": 4495,
+    "totalStages": 23,
+    "stageWins": 2,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 130,
+      "minutes": 29,
+      "seconds": 26
+    },
+    "winner": {
+      "name": "Louison Bobet",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "43",
+    "year": "1956",
+    "distance": 4498,
+    "totalStages": 23,
+    "stageWins": 0,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 124,
+      "minutes": 1,
+      "seconds": 16
+    },
+    "winner": {
+      "name": "Roger Walkowiak",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "44",
+    "year": "1957",
+    "distance": 4669,
+    "totalStages": 24,
+    "stageWins": 4,
+    "stagesLed": 15,
+    "margin": {
+      "hours": 0,
+      "minutes": 14,
+      "seconds": 14
+    },
+    "time": {
+      "hours": 135,
+      "minutes": 44,
+      "seconds": 42
+    },
+    "winner": {
+      "name": "Jacques Anquetil",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "45",
+    "year": "1958",
+    "distance": 4319,
+    "totalStages": 24,
+    "stageWins": 4,
+    "stagesLed": 2,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 116,
+      "minutes": 59,
+      "seconds": 5
+    },
+    "winner": {
+      "name": "Charly Gaul",
+      "nationality": "Luxembourg",
+      "team": "Luxembourg"
+    }
+  },
+  {
+    "edition": "46",
+    "year": "1959",
+    "distance": 4358,
+    "totalStages": 22,
+    "stageWins": 1,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 123,
+      "minutes": 46,
+      "seconds": 45
+    },
+    "winner": {
+      "name": "Federico Bahamontes",
+      "nationality": "Spain",
+      "team": "Spain"
+    }
+  },
+  {
+    "edition": "47",
+    "year": "1960",
+    "distance": 4173,
+    "totalStages": 22,
+    "stageWins": 0,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 5,
+      "seconds": 5
+    },
+    "time": {
+      "hours": 112,
+      "minutes": 8,
+      "seconds": 42
+    },
+    "winner": {
+      "name": "Gastone Nencini",
+      "nationality": "Italy",
+      "team": "Italy"
+    }
+  },
+  {
+    "edition": "48",
+    "year": "1961",
+    "distance": 4397,
+    "totalStages": 22,
+    "stageWins": 2,
+    "stagesLed": 21,
+    "margin": {
+      "hours": 0,
+      "minutes": 12,
+      "seconds": 12
+    },
+    "time": {
+      "hours": 122,
+      "minutes": 1,
+      "seconds": 33
+    },
+    "winner": {
+      "name": "Jacques Anquetil",
+      "nationality": "France",
+      "team": "France"
+    }
+  },
+  {
+    "edition": "49",
+    "year": "1962",
+    "distance": 4274,
+    "totalStages": 24,
+    "stageWins": 2,
+    "stagesLed": 3,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 114,
+      "minutes": 31,
+      "seconds": 54
+    },
+    "winner": {
+      "name": "Jacques Anquetil",
+      "nationality": "France",
+      "team": "Saint-Raphaël–Helyett–Hutchinson"
+    }
+  },
+  {
+    "edition": "50",
+    "year": "1963",
+    "distance": 4138,
+    "totalStages": 23,
+    "stageWins": 4,
+    "stagesLed": 5,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 113,
+      "minutes": 30,
+      "seconds": 5
+    },
+    "winner": {
+      "name": "Jacques Anquetil",
+      "nationality": "France",
+      "team": "Saint-Raphaël–Gitane–R. Geminiani"
+    }
+  },
+  {
+    "edition": "51",
+    "year": "1964",
+    "distance": 4504,
+    "totalStages": 25,
+    "stageWins": 4,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 55
+    },
+    "time": {
+      "hours": 127,
+      "minutes": 9,
+      "seconds": 44
+    },
+    "winner": {
+      "name": "Jacques Anquetil",
+      "nationality": "France",
+      "team": "Saint-Raphaël–Gitane–Dunlop"
+    }
+  },
+  {
+    "edition": "52",
+    "year": "1965",
+    "distance": 4188,
+    "totalStages": 24,
+    "stageWins": 3,
+    "stagesLed": 18,
+    "margin": {
+      "hours": 0,
+      "minutes": 2,
+      "seconds": 2
+    },
+    "time": {
+      "hours": 116,
+      "minutes": 42,
+      "seconds": 6
+    },
+    "winner": {
+      "name": "Felice Gimondi",
+      "nationality": "Italy",
+      "team": "Salvarani"
+    }
+  },
+  {
+    "edition": "53",
+    "year": "1966",
+    "distance": 4329,
+    "totalStages": 25,
+    "stageWins": 0,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 117,
+      "minutes": 34,
+      "seconds": 21
+    },
+    "winner": {
+      "name": "Lucien Aimar",
+      "nationality": "France",
+      "team": "Ford France–Hutchinson"
+    }
+  },
+  {
+    "edition": "54",
+    "year": "1967",
+    "distance": 4779,
+    "totalStages": 25,
+    "stageWins": 1,
+    "stagesLed": 17,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 136,
+      "minutes": 53,
+      "seconds": 50
+    },
+    "winner": {
+      "name": "Roger Pingeon",
+      "nationality": "France",
+      "team": "Peugeot–BP–Michelin"
+    }
+  },
+  {
+    "edition": "55",
+    "year": "1968",
+    "distance": 4492,
+    "totalStages": 26,
+    "stageWins": 2,
+    "stagesLed": 1,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 38
+    },
+    "time": {
+      "hours": 133,
+      "minutes": 49,
+      "seconds": 42
+    },
+    "winner": {
+      "name": "Jan Janssen",
+      "nationality": "Netherlands",
+      "team": "Pelforth–Sauvage–Lejeune"
+    }
+  },
+  {
+    "edition": "56",
+    "year": "1969",
+    "distance": 4117,
+    "totalStages": 26,
+    "stageWins": 6,
+    "stagesLed": 18,
+    "margin": {
+      "hours": 0,
+      "minutes": 17,
+      "seconds": 17
+    },
+    "time": {
+      "hours": 116,
+      "minutes": 16,
+      "seconds": 2
+    },
+    "winner": {
+      "name": "Eddy Merckx",
+      "nationality": "Belgium",
+      "team": "Faema"
+    }
+  },
+  {
+    "edition": "57",
+    "year": "1970",
+    "distance": 4254,
+    "totalStages": 29,
+    "stageWins": 8,
+    "stagesLed": 20,
+    "margin": {
+      "hours": 0,
+      "minutes": 12,
+      "seconds": 12
+    },
+    "time": {
+      "hours": 119,
+      "minutes": 31,
+      "seconds": 49
+    },
+    "winner": {
+      "name": "Eddy Merckx",
+      "nationality": "Belgium",
+      "team": "Faemino–Faema"
+    }
+  },
+  {
+    "edition": "58",
+    "year": "1971",
+    "distance": 3608,
+    "totalStages": 25,
+    "stageWins": 4,
+    "stagesLed": 17,
+    "margin": {
+      "hours": 0,
+      "minutes": 9,
+      "seconds": 9
+    },
+    "time": {
+      "hours": 96,
+      "minutes": 45,
+      "seconds": 14
+    },
+    "winner": {
+      "name": "Eddy Merckx",
+      "nationality": "Belgium",
+      "team": "Molteni"
+    }
+  },
+  {
+    "edition": "59",
+    "year": "1972",
+    "distance": 3846,
+    "totalStages": 25,
+    "stageWins": 6,
+    "stagesLed": 15,
+    "margin": {
+      "hours": 0,
+      "minutes": 10,
+      "seconds": 10
+    },
+    "time": {
+      "hours": 108,
+      "minutes": 17,
+      "seconds": 18
+    },
+    "winner": {
+      "name": "Eddy Merckx",
+      "nationality": "Belgium",
+      "team": "Molteni"
+    }
+  },
+  {
+    "edition": "60",
+    "year": "1973",
+    "distance": 4090,
+    "totalStages": 27,
+    "stageWins": 6,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 15,
+      "seconds": 15
+    },
+    "time": {
+      "hours": 122,
+      "minutes": 25,
+      "seconds": 34
+    },
+    "winner": {
+      "name": "Luis Ocaña",
+      "nationality": "Spain",
+      "team": "Bic"
+    }
+  },
+  {
+    "edition": "61",
+    "year": "1974",
+    "distance": 4098,
+    "totalStages": 27,
+    "stageWins": 8,
+    "stagesLed": 18,
+    "margin": {
+      "hours": 0,
+      "minutes": 8,
+      "seconds": 8
+    },
+    "time": {
+      "hours": 116,
+      "minutes": 16,
+      "seconds": 58
+    },
+    "winner": {
+      "name": "Eddy Merckx",
+      "nationality": "Belgium",
+      "team": "Molteni"
+    }
+  },
+  {
+    "edition": "62",
+    "year": "1975",
+    "distance": 4000,
+    "totalStages": 25,
+    "stageWins": 2,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 2,
+      "seconds": 2
+    },
+    "time": {
+      "hours": 114,
+      "minutes": 35,
+      "seconds": 31
+    },
+    "winner": {
+      "name": "Bernard Thévenet",
+      "nationality": "France",
+      "team": "Peugeot–BP–Michelin"
+    }
+  },
+  {
+    "edition": "63",
+    "year": "1976",
+    "distance": 4017,
+    "totalStages": 27,
+    "stageWins": 1,
+    "stagesLed": 12,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 116,
+      "minutes": 22,
+      "seconds": 23
+    },
+    "winner": {
+      "name": "Lucien Van Impe",
+      "nationality": "Belgium",
+      "team": "Gitane–Campagnolo"
+    }
+  },
+  {
+    "edition": "64",
+    "year": "1977",
+    "distance": 4096,
+    "totalStages": 28,
+    "stageWins": 1,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 48
+    },
+    "time": {
+      "hours": 115,
+      "minutes": 38,
+      "seconds": 30
+    },
+    "winner": {
+      "name": "Bernard Thévenet",
+      "nationality": "France",
+      "team": "Peugeot–Esso–Michelin"
+    }
+  },
+  {
+    "edition": "65",
+    "year": "1978",
+    "distance": 3908,
+    "totalStages": 25,
+    "stageWins": 3,
+    "stagesLed": 3,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 108,
+      "minutes": 18,
+      "seconds": 0
+    },
+    "winner": {
+      "name": "Bernard Hinault",
+      "nationality": "France",
+      "team": "Renault–Gitane–Campagnolo"
+    }
+  },
+  {
+    "edition": "66",
+    "year": "1979",
+    "distance": 3765,
+    "totalStages": 25,
+    "stageWins": 7,
+    "stagesLed": 17,
+    "margin": {
+      "hours": 0,
+      "minutes": 13,
+      "seconds": 13
+    },
+    "time": {
+      "hours": 103,
+      "minutes": 6,
+      "seconds": 50
+    },
+    "winner": {
+      "name": "Bernard Hinault",
+      "nationality": "France",
+      "team": "Renault–Gitane"
+    }
+  },
+  {
+    "edition": "67",
+    "year": "1980",
+    "distance": 3842,
+    "totalStages": 25,
+    "stageWins": 2,
+    "stagesLed": 10,
+    "margin": {
+      "hours": 0,
+      "minutes": 6,
+      "seconds": 6
+    },
+    "time": {
+      "hours": 109,
+      "minutes": 19,
+      "seconds": 14
+    },
+    "winner": {
+      "name": "Joop Zoetemelk",
+      "nationality": "Netherlands",
+      "team": "TI–Raleigh–Creda"
+    }
+  },
+  {
+    "edition": "68",
+    "year": "1981",
+    "distance": 3753,
+    "totalStages": 25,
+    "stageWins": 5,
+    "stagesLed": 18,
+    "margin": {
+      "hours": 0,
+      "minutes": 14,
+      "seconds": 14
+    },
+    "time": {
+      "hours": 96,
+      "minutes": 19,
+      "seconds": 38
+    },
+    "winner": {
+      "name": "Bernard Hinault",
+      "nationality": "France",
+      "team": "Renault–Elf–Gitane"
+    }
+  },
+  {
+    "edition": "69",
+    "year": "1982",
+    "distance": 3507,
+    "totalStages": 23,
+    "stageWins": 4,
+    "stagesLed": 12,
+    "margin": {
+      "hours": 0,
+      "minutes": 6,
+      "seconds": 6
+    },
+    "time": {
+      "hours": 92,
+      "minutes": 8,
+      "seconds": 46
+    },
+    "winner": {
+      "name": "Bernard Hinault",
+      "nationality": "France",
+      "team": "Renault–Elf–Gitane"
+    }
+  },
+  {
+    "edition": "70",
+    "year": "1983",
+    "distance": 3809,
+    "totalStages": 23,
+    "stageWins": 1,
+    "stagesLed": 6,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 105,
+      "minutes": 7,
+      "seconds": 52
+    },
+    "winner": {
+      "name": "Laurent Fignon",
+      "nationality": "France",
+      "team": "Renault–Elf"
+    }
+  },
+  {
+    "edition": "71",
+    "year": "1984",
+    "distance": 4021,
+    "totalStages": 24,
+    "stageWins": 5,
+    "stagesLed": 7,
+    "margin": {
+      "hours": 0,
+      "minutes": 10,
+      "seconds": 10
+    },
+    "time": {
+      "hours": 112,
+      "minutes": 3,
+      "seconds": 40
+    },
+    "winner": {
+      "name": "Laurent Fignon",
+      "nationality": "France",
+      "team": "Renault–Elf"
+    }
+  },
+  {
+    "edition": "72",
+    "year": "1985",
+    "distance": 4109,
+    "totalStages": 24,
+    "stageWins": 2,
+    "stagesLed": 16,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 113,
+      "minutes": 24,
+      "seconds": 23
+    },
+    "winner": {
+      "name": "Bernard Hinault",
+      "nationality": "France",
+      "team": "La Vie Claire"
+    }
+  },
+  {
+    "edition": "73",
+    "year": "1986",
+    "distance": 4094,
+    "totalStages": 24,
+    "stageWins": 1,
+    "stagesLed": 7,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 110,
+      "minutes": 35,
+      "seconds": 19
+    },
+    "winner": {
+      "name": "Greg LeMond",
+      "nationality": "United States",
+      "team": "La Vie Claire"
+    }
+  },
+  {
+    "edition": "74",
+    "year": "1987",
+    "distance": 4231,
+    "totalStages": 26,
+    "stageWins": 1,
+    "stagesLed": 3,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 40
+    },
+    "time": {
+      "hours": 115,
+      "minutes": 27,
+      "seconds": 42
+    },
+    "winner": {
+      "name": "Stephen Roche",
+      "nationality": "Ireland",
+      "team": "Carrera Jeans–Vagabond"
+    }
+  },
+  {
+    "edition": "75",
+    "year": "1988",
+    "distance": 3286,
+    "totalStages": 23,
+    "stageWins": 1,
+    "stagesLed": 11,
+    "margin": {
+      "hours": 0,
+      "minutes": 7,
+      "seconds": 7
+    },
+    "time": {
+      "hours": 84,
+      "minutes": 27,
+      "seconds": 53
+    },
+    "winner": {
+      "name": "Pedro Delgado",
+      "nationality": "Spain",
+      "team": "Reynolds"
+    }
+  },
+  {
+    "edition": "76",
+    "year": "1989",
+    "distance": 3285,
+    "totalStages": 22,
+    "stageWins": 3,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 8
+    },
+    "time": {
+      "hours": 87,
+      "minutes": 38,
+      "seconds": 35
+    },
+    "winner": {
+      "name": "Greg LeMond",
+      "nationality": "United States",
+      "team": "AD Renting–W-Cup–Bottecchia"
+    }
+  },
+  {
+    "edition": "77",
+    "year": "1990",
+    "distance": 3504,
+    "totalStages": 22,
+    "stageWins": 0,
+    "stagesLed": 2,
+    "margin": {
+      "hours": 0,
+      "minutes": 2,
+      "seconds": 2
+    },
+    "time": {
+      "hours": 90,
+      "minutes": 43,
+      "seconds": 20
+    },
+    "winner": {
+      "name": "Greg LeMond",
+      "nationality": "United States",
+      "team": "Z–Tomasso"
+    }
+  },
+  {
+    "edition": "78",
+    "year": "1991",
+    "distance": 3914,
+    "totalStages": 23,
+    "stageWins": 2,
+    "stagesLed": 10,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 101,
+      "minutes": 1,
+      "seconds": 20
+    },
+    "winner": {
+      "name": "Miguel Induráin",
+      "nationality": "Spain",
+      "team": "Banesto"
+    }
+  },
+  {
+    "edition": "79",
+    "year": "1992",
+    "distance": 3983,
+    "totalStages": 22,
+    "stageWins": 3,
+    "stagesLed": 10,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 100,
+      "minutes": 49,
+      "seconds": 30
+    },
+    "winner": {
+      "name": "Miguel Induráin",
+      "nationality": "Spain",
+      "team": "Banesto"
+    }
+  },
+  {
+    "edition": "80",
+    "year": "1993",
+    "distance": 3714,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 95,
+      "minutes": 57,
+      "seconds": 9
+    },
+    "winner": {
+      "name": "Miguel Induráin",
+      "nationality": "Spain",
+      "team": "Banesto"
+    }
+  },
+  {
+    "edition": "81",
+    "year": "1994",
+    "distance": 3978,
+    "totalStages": 22,
+    "stageWins": 1,
+    "stagesLed": 13,
+    "margin": {
+      "hours": 0,
+      "minutes": 5,
+      "seconds": 5
+    },
+    "time": {
+      "hours": 103,
+      "minutes": 38,
+      "seconds": 38
+    },
+    "winner": {
+      "name": "Miguel Induráin",
+      "nationality": "Spain",
+      "team": "Banesto"
+    }
+  },
+  {
+    "edition": "82",
+    "year": "1995",
+    "distance": 3635,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 13,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 92,
+      "minutes": 44,
+      "seconds": 59
+    },
+    "winner": {
+      "name": "Miguel Induráin",
+      "nationality": "Spain",
+      "team": "Banesto"
+    }
+  },
+  {
+    "edition": "83",
+    "year": "1996",
+    "distance": 3765,
+    "totalStages": 22,
+    "stageWins": 2,
+    "stagesLed": 13,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 95,
+      "minutes": 57,
+      "seconds": 16
+    },
+    "winner": {
+      "name": "Bjarne Riis",
+      "nationality": "Denmark",
+      "team": "Team Telekom"
+    }
+  },
+  {
+    "edition": "84",
+    "year": "1997",
+    "distance": 3950,
+    "totalStages": 22,
+    "stageWins": 2,
+    "stagesLed": 12,
+    "margin": {
+      "hours": 0,
+      "minutes": 9,
+      "seconds": 9
+    },
+    "time": {
+      "hours": 100,
+      "minutes": 30,
+      "seconds": 35
+    },
+    "winner": {
+      "name": "Jan Ullrich",
+      "nationality": "Germany",
+      "team": "Team Telekom"
+    }
+  },
+  {
+    "edition": "85",
+    "year": "1998",
+    "distance": 3875,
+    "totalStages": 22,
+    "stageWins": 2,
+    "stagesLed": 7,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 92,
+      "minutes": 49,
+      "seconds": 46
+    },
+    "winner": {
+      "name": "Marco Pantani",
+      "nationality": "Italy",
+      "team": "Mercatone Uno–Bianchi"
+    }
+  },
+  {
+    "edition": "86",
+    "year": "1999",
+    "distance": 3687,
+    "totalStages": 21,
+    "stageWins": 4,
+    "stagesLed": 15,
+    "margin": {
+      "hours": 0,
+      "minutes": 7,
+      "seconds": 7
+    },
+    "time": {
+      "hours": 91,
+      "minutes": 32,
+      "seconds": 16
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "U.S. Postal Service"
+    }
+  },
+  {
+    "edition": "87",
+    "year": "2000",
+    "distance": 3662,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 12,
+    "margin": {
+      "hours": 0,
+      "minutes": 6,
+      "seconds": 6
+    },
+    "time": {
+      "hours": 92,
+      "minutes": 33,
+      "seconds": 8
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "U.S. Postal Service"
+    }
+  },
+  {
+    "edition": "88",
+    "year": "2001",
+    "distance": 3458,
+    "totalStages": 21,
+    "stageWins": 4,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 6,
+      "seconds": 6
+    },
+    "time": {
+      "hours": 86,
+      "minutes": 17,
+      "seconds": 28
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "U.S. Postal Service"
+    }
+  },
+  {
+    "edition": "89",
+    "year": "2002",
+    "distance": 3272,
+    "totalStages": 21,
+    "stageWins": 4,
+    "stagesLed": 11,
+    "margin": {
+      "hours": 0,
+      "minutes": 7,
+      "seconds": 7
+    },
+    "time": {
+      "hours": 82,
+      "minutes": 5,
+      "seconds": 12
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "U.S. Postal Service"
+    }
+  },
+  {
+    "edition": "90",
+    "year": "2003",
+    "distance": 3427,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 13,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 83,
+      "minutes": 41,
+      "seconds": 12
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "U.S. Postal Service"
+    }
+  },
+  {
+    "edition": "91",
+    "year": "2004",
+    "distance": 3391,
+    "totalStages": 21,
+    "stageWins": 5,
+    "stagesLed": 7,
+    "margin": {
+      "hours": 0,
+      "minutes": 6,
+      "seconds": 6
+    },
+    "time": {
+      "hours": 83,
+      "minutes": 36,
+      "seconds": 2
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "U.S. Postal Service"
+    }
+  },
+  {
+    "edition": "92",
+    "year": "2005",
+    "distance": 3593,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 17,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 86,
+      "minutes": 15,
+      "seconds": 2
+    },
+    "winner": {
+      "name": "Lance Armstrong",
+      "nationality": "United States",
+      "team": "Discovery Channel"
+    }
+  },
+  {
+    "edition": "93",
+    "year": "2006",
+    "distance": 3657,
+    "totalStages": 21,
+    "stageWins": 0,
+    "stagesLed": 8,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 32
+    },
+    "time": {
+      "hours": 89,
+      "minutes": 40,
+      "seconds": 27
+    },
+    "winner": {
+      "name": "Óscar Pereiro",
+      "nationality": "Spain",
+      "team": "Caisse d'Epargne–Illes Balears"
+    }
+  },
+  {
+    "edition": "94",
+    "year": "2007",
+    "distance": 3570,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 4,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 23
+    },
+    "time": {
+      "hours": 91,
+      "minutes": 0,
+      "seconds": 26
+    },
+    "winner": {
+      "name": "Alberto Contador",
+      "nationality": "Spain",
+      "team": "Discovery Channel"
+    }
+  },
+  {
+    "edition": "95",
+    "year": "2008",
+    "distance": 3559,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 5,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 58
+    },
+    "time": {
+      "hours": 87,
+      "minutes": 52,
+      "seconds": 52
+    },
+    "winner": {
+      "name": "Carlos Sastre",
+      "nationality": "Spain",
+      "team": "Team CSC"
+    }
+  },
+  {
+    "edition": "96",
+    "year": "2009",
+    "distance": 3459,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 7,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 85,
+      "minutes": 48,
+      "seconds": 35
+    },
+    "winner": {
+      "name": "Alberto Contador",
+      "nationality": "Spain",
+      "team": "Astana"
+    }
+  },
+  {
+    "edition": "97",
+    "year": "2010",
+    "distance": 3642,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 12,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 91,
+      "minutes": 59,
+      "seconds": 27
+    },
+    "winner": {
+      "name": "Andy Schleck",
+      "nationality": "Luxembourg",
+      "team": "Team Saxo Bank"
+    }
+  },
+  {
+    "edition": "98",
+    "year": "2011",
+    "distance": 3430,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 2,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 86,
+      "minutes": 12,
+      "seconds": 22
+    },
+    "winner": {
+      "name": "Cadel Evans",
+      "nationality": "Australia",
+      "team": "BMC Racing Team"
+    }
+  },
+  {
+    "edition": "99",
+    "year": "2012",
+    "distance": 3496,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 3,
+      "seconds": 3
+    },
+    "time": {
+      "hours": 87,
+      "minutes": 34,
+      "seconds": 47
+    },
+    "winner": {
+      "name": "Bradley Wiggins",
+      "nationality": "Great Britain",
+      "team": "Team Sky"
+    }
+  },
+  {
+    "edition": "100",
+    "year": "2013",
+    "distance": 3404,
+    "totalStages": 21,
+    "stageWins": 3,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 83,
+      "minutes": 56,
+      "seconds": 20
+    },
+    "winner": {
+      "name": "Chris Froome",
+      "nationality": "Great Britain",
+      "team": "Team Sky"
+    }
+  },
+  {
+    "edition": "101",
+    "year": "2014",
+    "distance": 3660.5,
+    "totalStages": 21,
+    "stageWins": 4,
+    "stagesLed": 19,
+    "margin": {
+      "hours": 0,
+      "minutes": 7,
+      "seconds": 7
+    },
+    "time": {
+      "hours": 89,
+      "minutes": 59,
+      "seconds": 6
+    },
+    "winner": {
+      "name": "Vincenzo Nibali",
+      "nationality": "Italy",
+      "team": "Astana"
+    }
+  },
+  {
+    "edition": "102",
+    "year": "2015",
+    "distance": 3360.3,
+    "totalStages": 21,
+    "stageWins": 1,
+    "stagesLed": 16,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 84,
+      "minutes": 46,
+      "seconds": 14
+    },
+    "winner": {
+      "name": "Chris Froome",
+      "nationality": "Great Britain",
+      "team": "Team Sky"
+    }
+  },
+  {
+    "edition": "103",
+    "year": "2016",
+    "distance": 3529,
+    "totalStages": 21,
+    "stageWins": 2,
+    "stagesLed": 14,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 4
+    },
+    "time": {
+      "hours": 89,
+      "minutes": 4,
+      "seconds": 48
+    },
+    "winner": {
+      "name": "Chris Froome",
+      "nationality": "Great Britain",
+      "team": "Team Sky"
+    }
+  },
+  {
+    "edition": "104",
+    "year": "2017",
+    "distance": 3540,
+    "totalStages": 21,
+    "stageWins": 0,
+    "stagesLed": 15,
+    "margin": {
+      "hours": 0,
+      "minutes": 0,
+      "seconds": 54
+    },
+    "time": {
+      "hours": 86,
+      "minutes": 20,
+      "seconds": 55
+    },
+    "winner": {
+      "name": "Chris Froome",
+      "nationality": "Great Britain",
+      "team": "Team Sky"
+    }
+  },
+  {
+    "edition": "105",
+    "year": "2018",
+    "distance": 3349,
+    "stageWins": 2,
+    "stagesLed": 11,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 83,
+      "minutes": 17,
+      "seconds": 13
+    },
+    "winner": {
+      "name": "Geraint Thomas",
+      "nationality": "Great Britain",
+      "team": "Team Sky"
+    }
+  },
+  {
+    "edition": "106",
+    "year": "2019",
+    "distance": 3349,
+    "stageWins": 0,
+    "stagesLed": 2,
+    "margin": {
+      "hours": 0,
+      "minutes": 1,
+      "seconds": 1
+    },
+    "time": {
+      "hours": 82,
+      "minutes": 57,
+      "seconds": 0
+    },
+    "winner": {
+      "name": "Egan Bernal",
+      "nationality": "Colombia",
+      "team": "Team Ineos"
+    }
+  }
+]
