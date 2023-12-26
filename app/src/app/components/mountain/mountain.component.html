@@ -1,6 +1,22 @@
 @if (edition) {
-  <p>{{edition.winner.name}}</p>
+  <section class="mountain__container">
+    <div class="mountain__graphs">
+      <div [id]="stagesId"></div>
+      <div [id]="leadId"></div>
+    </div>
 
-  <div [id]="id"></div>
+    <div class="mountain__margin" [id]="marginId">
+
+    </div>
+
+    <div class="mountain__information">
+      <p class="winner">
+        <span class="mr-1 font-bold">{{edition.year}}</span>
+        <span class="mr-1 font-bold">|</span>
+        <span class="mr-1">{{firstName}}</span>
+        <span class="font-bold">{{lastName}}</span>
+      </p>
+    </div>
+  </section>
 }
 

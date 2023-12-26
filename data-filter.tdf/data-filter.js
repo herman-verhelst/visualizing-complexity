@@ -10,7 +10,7 @@ let shortestRace = 10000;
 
 let ridersWithMoreThanOneWin = 0;
 
-const writeStream = fs.createWriteStream('../test.1/public/formatted-data.json')
+const writeStream = fs.createWriteStream('./formatted-data.json')
     .on('error', (err) => console.log(err))
     .on('close', () => console.log('Data formatted and written to formatted-data.json'))
 
@@ -70,6 +70,7 @@ function mapWinners(winner, stages) {
         totalStages: stages[format(parse(winner.start_date, 'yyyy-MM-dd', new Date()), 'yyyy')],
         stageWins: parseInt(winner.stage_wins),
         stagesLed: parseInt(winner.stages_led),
+        marginNumber: parseFloat(winner.time_margin),
         margin: formatHours(winner.time_margin),
         time: formatHours(winner.time_overall),
         winner: {

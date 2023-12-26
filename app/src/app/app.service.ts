@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, Observable} from "rxjs";
+import {BehaviorSubject, filter, map, Observable} from "rxjs";
 import {Edition} from "./models/edition";
 
 @Injectable({
@@ -17,6 +17,19 @@ export class AppService {
 
   setData(newData: Edition[]): void {
     this._dataSubject.next(newData);
+  }
+
+  getMinAndMaxMarginTime(): Observable<{ min: number; max: number }> {
+    return this.data$.pipe(
+      filter(data => data.length > 0),
+      map(editions => {
+        const marginTimes = editions.map(edition => edition.marginNumber);
+        const minMarginTime = Math.min(...marginTimes);
+        const maxMarginTime = Math.max(...marginTimes);
+
+        return { min: minMarginTime, max: maxMarginTime };
+      })
+    );
   }
 
   constructor(private httpClient: HttpClient) {

@@ -14,6 +14,7 @@ import {Edition} from "./models/edition";
 })
 export class AppComponent implements OnInit {
   editions: Edition[] = [];
+  margins: { min: number, max: number } = {min: 0, max: 100};
 
   constructor(private appService: AppService) {
   }
@@ -23,8 +24,10 @@ export class AppComponent implements OnInit {
 
     this.appService.data$.subscribe((data) => {
       this.editions = data;
-
-      console.log('Data changed:', data);
     });
+
+    this.appService.getMinAndMaxMarginTime().subscribe(margins => {
+      this.margins = margins
+    })
   }
 }

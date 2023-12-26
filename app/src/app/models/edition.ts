@@ -8,6 +8,7 @@ export interface Edition {
   totalStages: number;
   stageWins: number;
   stagesLed: number;
+  marginNumber: number;
   margin: AppTime;
   time: AppTime;
   winner: Winner;

@@ -6,6 +6,7 @@
     "totalStages": 6,
     "stageWins": 3,
     "stagesLed": 6,
+    "marginNumber": 2.9891666666666667,
     "margin": {
       "hours": 2,
       "minutes": 59,
@@ -29,6 +30,7 @@
     "totalStages": 6,
     "stageWins": 1,
     "stagesLed": 3,
+    "marginNumber": 2.2705555555555557,
     "margin": {
       "hours": 2,
       "minutes": 16,
@@ -52,6 +54,7 @@
     "totalStages": 11,
     "stageWins": 5,
     "stagesLed": 10,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -67,6 +70,7 @@
     "totalStages": 13,
     "stageWins": 5,
     "stagesLed": 12,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -82,6 +86,7 @@
     "totalStages": 14,
     "stageWins": 2,
     "stagesLed": 5,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -97,6 +102,7 @@
     "totalStages": 14,
     "stageWins": 5,
     "stagesLed": 13,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -112,6 +118,7 @@
     "totalStages": 14,
     "stageWins": 6,
     "stagesLed": 13,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -127,6 +134,7 @@
     "totalStages": 15,
     "stageWins": 4,
     "stagesLed": 3,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -142,6 +150,7 @@
     "totalStages": 15,
     "stageWins": 2,
     "stagesLed": 13,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -157,6 +166,7 @@
     "totalStages": 15,
     "stageWins": 3,
     "stagesLed": 13,
+    "marginNumber": null,
     "margin": "Invalid input",
     "time": "Invalid input",
     "winner": {
@@ -172,6 +182,7 @@
     "totalStages": 15,
     "stageWins": 1,
     "stagesLed": 8,
+    "marginNumber": 0.13555555555555554,
     "margin": {
       "hours": 0,
       "minutes": 8,
@@ -195,6 +206,7 @@
     "totalStages": 15,
     "stageWins": 1,
     "stagesLed": 15,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -218,6 +230,7 @@
     "totalStages": 15,
     "stageWins": 1,
     "stagesLed": 2,
+    "marginNumber": 1.7149999999999999,
     "margin": {
       "hours": 1,
       "minutes": 42,
@@ -241,6 +254,7 @@
     "totalStages": 15,
     "stageWins": 4,
     "stagesLed": 14,
+    "marginNumber": 0.9658333333333333,
     "margin": {
       "hours": 0,
       "minutes": 57,
@@ -264,6 +278,7 @@
     "totalStages": 15,
     "stageWins": 2,
     "stagesLed": 14,
+    "marginNumber": 0.305,
     "margin": {
       "hours": 0,
       "minutes": 18,
@@ -287,6 +302,7 @@
     "totalStages": 15,
     "stageWins": 0,
     "stagesLed": 3,
+    "marginNumber": 0.6947222222222222,
     "margin": {
       "hours": 0,
       "minutes": 41,
@@ -310,6 +326,7 @@
     "totalStages": 15,
     "stageWins": 3,
     "stagesLed": 6,
+    "marginNumber": 0.5083333333333333,
     "margin": {
       "hours": 0,
       "minutes": 30,
@@ -333,6 +350,7 @@
     "totalStages": 15,
     "stageWins": 4,
     "stagesLed": 15,
+    "marginNumber": 0.5930555555555556,
     "margin": {
       "hours": 0,
       "minutes": 35,
@@ -356,6 +374,7 @@
     "totalStages": 18,
     "stageWins": 4,
     "stagesLed": 13,
+    "marginNumber": 0.915,
     "margin": {
       "hours": 0,
       "minutes": 54,
@@ -379,6 +398,7 @@
     "totalStages": 17,
     "stageWins": 2,
     "stagesLed": 8,
+    "marginNumber": 1.3736111111111111,
     "margin": {
       "hours": 1,
       "minutes": 22,
@@ -402,6 +422,7 @@
     "totalStages": 24,
     "stageWins": 3,
     "stagesLed": 14,
+    "marginNumber": 1.811388888888889,
     "margin": {
       "hours": 1,
       "minutes": 48,
@@ -425,6 +446,7 @@
     "totalStages": 22,
     "stageWins": 5,
     "stagesLed": 22,
+    "marginNumber": 0.8472222222222222,
     "margin": {
       "hours": 0,
       "minutes": 50,
@@ -448,6 +470,7 @@
     "totalStages": 22,
     "stageWins": 1,
     "stagesLed": 16,
+    "marginNumber": 0.7455555555555555,
     "margin": {
       "hours": 0,
       "minutes": 44,
@@ -471,6 +494,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 13,
+    "marginNumber": 0.23722222222222222,
     "margin": {
       "hours": 0,
       "minutes": 14,
@@ -494,6 +518,7 @@
     "totalStages": 24,
     "stageWins": 1,
     "stagesLed": 16,
+    "marginNumber": 0.20333333333333334,
     "margin": {
       "hours": 0,
       "minutes": 12,
@@ -517,6 +542,7 @@
     "totalStages": 21,
     "stageWins": 6,
     "stagesLed": 19,
+    "marginNumber": 0.4066666666666667,
     "margin": {
       "hours": 0,
       "minutes": 24,
@@ -540,6 +566,7 @@
     "totalStages": 23,
     "stageWins": 3,
     "stagesLed": 12,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -563,6 +590,7 @@
     "totalStages": 24,
     "stageWins": 3,
     "stagesLed": 22,
+    "marginNumber": 0.4575,
     "margin": {
       "hours": 0,
       "minutes": 27,
@@ -586,6 +614,7 @@
     "totalStages": 27,
     "stageWins": 3,
     "stagesLed": 21,
+    "marginNumber": 0.28805555555555556,
     "margin": {
       "hours": 0,
       "minutes": 17,
@@ -609,6 +638,7 @@
     "totalStages": 27,
     "stageWins": 4,
     "stagesLed": 14,
+    "marginNumber": 0.4405555555555556,
     "margin": {
       "hours": 0,
       "minutes": 26,
@@ -632,6 +662,7 @@
     "totalStages": 31,
     "stageWins": 3,
     "stagesLed": 4,
+    "marginNumber": 0.11861111111111111,
     "margin": {
       "hours": 0,
       "minutes": 7,
@@ -655,6 +686,7 @@
     "totalStages": 29,
     "stageWins": 2,
     "stagesLed": 8,
+    "marginNumber": 0.305,
     "margin": {
       "hours": 0,
       "minutes": 18,
@@ -678,6 +710,7 @@
     "totalStages": 28,
     "stageWins": 2,
     "stagesLed": 8,
+    "marginNumber": 0.5083333333333333,
     "margin": {
       "hours": 0,
       "minutes": 30,
@@ -701,6 +734,7 @@
     "totalStages": 21,
     "stageWins": 3,
     "stagesLed": 1,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -724,6 +758,7 @@
     "totalStages": 21,
     "stageWins": 7,
     "stagesLed": 9,
+    "marginNumber": 0.4405555555555556,
     "margin": {
       "hours": 0,
       "minutes": 26,
@@ -747,6 +782,7 @@
     "totalStages": 21,
     "stageWins": 3,
     "stagesLed": 5,
+    "marginNumber": 0.16944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 10,
@@ -770,6 +806,7 @@
     "totalStages": 22,
     "stageWins": 3,
     "stagesLed": 11,
+    "marginNumber": 0.1525,
     "margin": {
       "hours": 0,
       "minutes": 9,
@@ -793,6 +830,7 @@
     "totalStages": 24,
     "stageWins": 5,
     "stagesLed": 11,
+    "marginNumber": 0.37277777777777776,
     "margin": {
       "hours": 0,
       "minutes": 22,
@@ -816,6 +854,7 @@
     "totalStages": 23,
     "stageWins": 5,
     "stagesLed": 14,
+    "marginNumber": 0.47444444444444445,
     "margin": {
       "hours": 0,
       "minutes": 28,
@@ -839,6 +878,7 @@
     "totalStages": 22,
     "stageWins": 2,
     "stagesLed": 5,
+    "marginNumber": 0.23722222222222222,
     "margin": {
       "hours": 0,
       "minutes": 14,
@@ -862,6 +902,7 @@
     "totalStages": 25,
     "stageWins": 3,
     "stagesLed": 14,
+    "marginNumber": 0.25416666666666665,
     "margin": {
       "hours": 0,
       "minutes": 15,
@@ -885,6 +926,7 @@
     "totalStages": 23,
     "stageWins": 2,
     "stagesLed": 6,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -908,6 +950,7 @@
     "totalStages": 23,
     "stageWins": 0,
     "stagesLed": 8,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -931,6 +974,7 @@
     "totalStages": 24,
     "stageWins": 4,
     "stagesLed": 15,
+    "marginNumber": 0.23722222222222222,
     "margin": {
       "hours": 0,
       "minutes": 14,
@@ -954,6 +998,7 @@
     "totalStages": 24,
     "stageWins": 4,
     "stagesLed": 2,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -977,6 +1022,7 @@
     "totalStages": 22,
     "stageWins": 1,
     "stagesLed": 6,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1000,6 +1046,7 @@
     "totalStages": 22,
     "stageWins": 0,
     "stagesLed": 14,
+    "marginNumber": 0.08472222222222221,
     "margin": {
       "hours": 0,
       "minutes": 5,
@@ -1023,6 +1070,7 @@
     "totalStages": 22,
     "stageWins": 2,
     "stagesLed": 21,
+    "marginNumber": 0.20333333333333334,
     "margin": {
       "hours": 0,
       "minutes": 12,
@@ -1046,6 +1094,7 @@
     "totalStages": 24,
     "stageWins": 2,
     "stagesLed": 3,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1069,6 +1118,7 @@
     "totalStages": 23,
     "stageWins": 4,
     "stagesLed": 5,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -1092,6 +1142,7 @@
     "totalStages": 25,
     "stageWins": 4,
     "stagesLed": 6,
+    "marginNumber": 0.015277777777777777,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -1115,6 +1166,7 @@
     "totalStages": 24,
     "stageWins": 3,
     "stagesLed": 18,
+    "marginNumber": 0.033888888888888885,
     "margin": {
       "hours": 0,
       "minutes": 2,
@@ -1138,6 +1190,7 @@
     "totalStages": 25,
     "stageWins": 0,
     "stagesLed": 6,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -1161,6 +1214,7 @@
     "totalStages": 25,
     "stageWins": 1,
     "stagesLed": 17,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -1184,6 +1238,7 @@
     "totalStages": 26,
     "stageWins": 2,
     "stagesLed": 1,
+    "marginNumber": 0.010555555555555556,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -1207,6 +1262,7 @@
     "totalStages": 26,
     "stageWins": 6,
     "stagesLed": 18,
+    "marginNumber": 0.28805555555555556,
     "margin": {
       "hours": 0,
       "minutes": 17,
@@ -1230,6 +1286,7 @@
     "totalStages": 29,
     "stageWins": 8,
     "stagesLed": 20,
+    "marginNumber": 0.20333333333333334,
     "margin": {
       "hours": 0,
       "minutes": 12,
@@ -1253,6 +1310,7 @@
     "totalStages": 25,
     "stageWins": 4,
     "stagesLed": 17,
+    "marginNumber": 0.1525,
     "margin": {
       "hours": 0,
       "minutes": 9,
@@ -1276,6 +1334,7 @@
     "totalStages": 25,
     "stageWins": 6,
     "stagesLed": 15,
+    "marginNumber": 0.16944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 10,
@@ -1299,6 +1358,7 @@
     "totalStages": 27,
     "stageWins": 6,
     "stagesLed": 14,
+    "marginNumber": 0.25416666666666665,
     "margin": {
       "hours": 0,
       "minutes": 15,
@@ -1322,6 +1382,7 @@
     "totalStages": 27,
     "stageWins": 8,
     "stagesLed": 18,
+    "marginNumber": 0.13555555555555554,
     "margin": {
       "hours": 0,
       "minutes": 8,
@@ -1345,6 +1406,7 @@
     "totalStages": 25,
     "stageWins": 2,
     "stagesLed": 8,
+    "marginNumber": 0.033888888888888885,
     "margin": {
       "hours": 0,
       "minutes": 2,
@@ -1368,6 +1430,7 @@
     "totalStages": 27,
     "stageWins": 1,
     "stagesLed": 12,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1391,6 +1454,7 @@
     "totalStages": 28,
     "stageWins": 1,
     "stagesLed": 8,
+    "marginNumber": 0.013333333333333334,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -1414,6 +1478,7 @@
     "totalStages": 25,
     "stageWins": 3,
     "stagesLed": 3,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -1437,6 +1502,7 @@
     "totalStages": 25,
     "stageWins": 7,
     "stagesLed": 17,
+    "marginNumber": 0.2202777777777778,
     "margin": {
       "hours": 0,
       "minutes": 13,
@@ -1460,6 +1526,7 @@
     "totalStages": 25,
     "stageWins": 2,
     "stagesLed": 10,
+    "marginNumber": 0.10166666666666667,
     "margin": {
       "hours": 0,
       "minutes": 6,
@@ -1483,6 +1550,7 @@
     "totalStages": 25,
     "stageWins": 5,
     "stagesLed": 18,
+    "marginNumber": 0.23722222222222222,
     "margin": {
       "hours": 0,
       "minutes": 14,
@@ -1506,6 +1574,7 @@
     "totalStages": 23,
     "stageWins": 4,
     "stagesLed": 12,
+    "marginNumber": 0.10166666666666667,
     "margin": {
       "hours": 0,
       "minutes": 6,
@@ -1529,6 +1598,7 @@
     "totalStages": 23,
     "stageWins": 1,
     "stagesLed": 6,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1552,6 +1622,7 @@
     "totalStages": 24,
     "stageWins": 5,
     "stagesLed": 7,
+    "marginNumber": 0.16944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 10,
@@ -1575,6 +1646,7 @@
     "totalStages": 24,
     "stageWins": 2,
     "stagesLed": 16,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -1598,6 +1670,7 @@
     "totalStages": 24,
     "stageWins": 1,
     "stagesLed": 7,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -1621,6 +1694,7 @@
     "totalStages": 26,
     "stageWins": 1,
     "stagesLed": 3,
+    "marginNumber": 0.011111111111111112,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -1644,6 +1718,7 @@
     "totalStages": 23,
     "stageWins": 1,
     "stagesLed": 11,
+    "marginNumber": 0.11861111111111111,
     "margin": {
       "hours": 0,
       "minutes": 7,
@@ -1667,6 +1742,7 @@
     "totalStages": 22,
     "stageWins": 3,
     "stagesLed": 8,
+    "marginNumber": 0.0022222222222222222,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -1690,6 +1766,7 @@
     "totalStages": 22,
     "stageWins": 0,
     "stagesLed": 2,
+    "marginNumber": 0.033888888888888885,
     "margin": {
       "hours": 0,
       "minutes": 2,
@@ -1713,6 +1790,7 @@
     "totalStages": 23,
     "stageWins": 2,
     "stagesLed": 10,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -1736,6 +1814,7 @@
     "totalStages": 22,
     "stageWins": 3,
     "stagesLed": 10,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1759,6 +1838,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 14,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1782,6 +1862,7 @@
     "totalStages": 22,
     "stageWins": 1,
     "stagesLed": 13,
+    "marginNumber": 0.08472222222222221,
     "margin": {
       "hours": 0,
       "minutes": 5,
@@ -1805,6 +1886,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 13,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -1828,6 +1910,7 @@
     "totalStages": 22,
     "stageWins": 2,
     "stagesLed": 13,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -1851,6 +1934,7 @@
     "totalStages": 22,
     "stageWins": 2,
     "stagesLed": 12,
+    "marginNumber": 0.1525,
     "margin": {
       "hours": 0,
       "minutes": 9,
@@ -1874,6 +1958,7 @@
     "totalStages": 22,
     "stageWins": 2,
     "stagesLed": 7,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -1897,6 +1982,7 @@
     "totalStages": 21,
     "stageWins": 4,
     "stagesLed": 15,
+    "marginNumber": 0.11861111111111111,
     "margin": {
       "hours": 0,
       "minutes": 7,
@@ -1920,6 +2006,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 12,
+    "marginNumber": 0.10166666666666667,
     "margin": {
       "hours": 0,
       "minutes": 6,
@@ -1943,6 +2030,7 @@
     "totalStages": 21,
     "stageWins": 4,
     "stagesLed": 8,
+    "marginNumber": 0.10166666666666667,
     "margin": {
       "hours": 0,
       "minutes": 6,
@@ -1966,6 +2054,7 @@
     "totalStages": 21,
     "stageWins": 4,
     "stagesLed": 11,
+    "marginNumber": 0.11861111111111111,
     "margin": {
       "hours": 0,
       "minutes": 7,
@@ -1989,6 +2078,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 13,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -2012,6 +2102,7 @@
     "totalStages": 21,
     "stageWins": 5,
     "stagesLed": 7,
+    "marginNumber": 0.10166666666666667,
     "margin": {
       "hours": 0,
       "minutes": 6,
@@ -2035,6 +2126,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 17,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -2058,6 +2150,7 @@
     "totalStages": 21,
     "stageWins": 0,
     "stagesLed": 8,
+    "marginNumber": 0.008888888888888889,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -2081,6 +2174,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 4,
+    "marginNumber": 0.006388888888888889,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -2104,6 +2198,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 5,
+    "marginNumber": 0.01611111111111111,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -2127,6 +2222,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 7,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -2150,6 +2246,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 12,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -2173,6 +2270,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 2,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -2196,6 +2294,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 14,
+    "marginNumber": 0.050833333333333335,
     "margin": {
       "hours": 0,
       "minutes": 3,
@@ -2219,6 +2318,7 @@
     "totalStages": 21,
     "stageWins": 3,
     "stagesLed": 14,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -2242,6 +2342,7 @@
     "totalStages": 21,
     "stageWins": 4,
     "stagesLed": 19,
+    "marginNumber": 0.11861111111111111,
     "margin": {
       "hours": 0,
       "minutes": 7,
@@ -2265,6 +2366,7 @@
     "totalStages": 21,
     "stageWins": 1,
     "stagesLed": 16,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -2288,6 +2390,7 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 14,
+    "marginNumber": 0.06777777777777777,
     "margin": {
       "hours": 0,
       "minutes": 4,
@@ -2311,6 +2414,7 @@
     "totalStages": 21,
     "stageWins": 0,
     "stagesLed": 15,
+    "marginNumber": 0.015,
     "margin": {
       "hours": 0,
       "minutes": 0,
@@ -2331,8 +2435,10 @@
     "edition": "105",
     "year": "2018",
     "distance": 3349,
+    "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 11,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,
@@ -2353,8 +2459,10 @@
     "edition": "106",
     "year": "2019",
     "distance": 3349,
+    "totalStages": 21,
     "stageWins": 0,
     "stagesLed": 2,
+    "marginNumber": 0.016944444444444443,
     "margin": {
       "hours": 0,
       "minutes": 1,

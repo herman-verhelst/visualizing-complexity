@@ -1,0 +1,37 @@
+:root {
+  --color-background-900: #1A170F;
+  --color-background-800: #181714;
+
+  --color-card-900: #2E2D29;
+  --color-card-800: #1A1915;
+
+  --color-primary-900: #2A2824;
+  --color-primary-700: #4B4740;
+  --color-primary-300: #67645C;
+
+  --color-text: #F7F5EF;
+
+  --gradient-background: linear-gradient(180deg, var(--color-background-900) 0%, var(--color-background-800) 100%);
+  --gradient-card: linear-gradient(180deg, var(--color-card-900) 0%, var(--color-card-800) 100%);
+
+  --shadow-card: 0px 2px 3px 0px rgba(0, 0, 0, 0.30), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+html {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  background-color: var(--color-background-900);
+  background-image: var(--gradient-background);
+  color: var(--color-text);
+}
+
+body {
+  max-width: 1400px;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+h1 {
+
+}
