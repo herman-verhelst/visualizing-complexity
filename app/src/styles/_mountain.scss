@@ -9,6 +9,12 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     position: relative;
+
+    &:hover {
+      .mountain__info {
+        opacity: 1;
+      }
+    }
   }
 
   &__graphs {
@@ -20,6 +26,10 @@
       position: relative;
       z-index: 1;
     }
+
+    div {
+      position: relative;
+    }
   }
 
   &__margin {
@@ -27,12 +37,45 @@
     bottom: 1rem;
     width: calc(100% - 4rem);
   }
+
+  &__info {
+    opacity: 0;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: 99px;
+    background: var(--color-primary-900);
+    box-shadow: var(--shadow-mountain);
+    transition: var(--transition) opacity;
+    z-index: 2;
+
+    &--margin {
+      left: 11rem;
+      transform: initial;
+    }
+  }
 }
 
 .winner {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .divider {
+    height: 1rem;
+    width: 2px;
+    background-color: var(--color-text);
+  }
 
   &__lastname {
     font-weight: 700;

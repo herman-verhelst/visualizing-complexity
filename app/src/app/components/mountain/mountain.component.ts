@@ -23,6 +23,9 @@ export class MountainComponent implements OnInit, AfterViewInit {
   firstName: string;
   lastName: string;
 
+  mountainSize: number = 5;
+  marginSpacingLeft: number = this.mountainSize * 2;
+
   baseColor1: string = '#605D5280';
   baseColor2: string = '#1F1E1C80';
   graphColor1: string = '#E9E7E0';
@@ -52,9 +55,10 @@ export class MountainComponent implements OnInit, AfterViewInit {
   createMargin() {
     const svgContainer = this.element.nativeElement.querySelector('.mountain__margin')
 
-    const remWidth = convertRemToPixels(1),
+    const
+      remWidth = convertRemToPixels(1),
       containerWidth = svgContainer.offsetWidth,
-      calculatedFactor = (containerWidth - 12 * remWidth) / this.margins.max
+      calculatedFactor = (containerWidth - this.marginSpacingLeft * remWidth) / this.margins.max
 
     const margin = {top: 0, right: 0, bottom: 0, left: 0},
       width = svgContainer.offsetWidth - 2 * parseFloat(window.getComputedStyle(svgContainer).paddingLeft) - margin.left - margin.right,
@@ -71,7 +75,7 @@ export class MountainComponent implements OnInit, AfterViewInit {
     this.createShadow(svg)
 
     svg.append("rect")
-      .attr("x", remWidth * 12)
+      .attr("x", remWidth * this.marginSpacingLeft)
       .attr("y", 0)
       .attr("rx", height / 2)
       .attr("ry", height / 2)
@@ -85,7 +89,7 @@ export class MountainComponent implements OnInit, AfterViewInit {
     svg.append("rect")
       .attr("x", 0)
       .attr("y", height - 1)
-      .attr("width", calculatedFactor * this.edition?.marginNumber + 12 * remWidth)
+      .attr("width", calculatedFactor * this.edition?.marginNumber + this.marginSpacingLeft * remWidth)
       .attr("height", 1)
       .attr('fill', 'red')
       .attr('stroke', this.graphBorderColor)
@@ -94,8 +98,8 @@ export class MountainComponent implements OnInit, AfterViewInit {
 
   createGraph(): void {
     const margin = {top: 0, right: 0, bottom: 0, left: 0},
-      width = convertRemToPixels(6) - margin.left - margin.right,
-      height = convertRemToPixels(6) - margin.top - margin.bottom;
+      width = convertRemToPixels(this.mountainSize) - margin.left - margin.right,
+      height = convertRemToPixels(this.mountainSize) - margin.top - margin.bottom;
 
     const stagesSvg = d3.select(`#${this.stagesId}`)
       .append("svg")
@@ -243,6 +247,6 @@ export class MountainComponent implements OnInit, AfterViewInit {
       .attr("dx", 0)
       .attr("dy", 0)
       .attr("stdDeviation", 4)
-      .attr("flood-color", "rgba(19, 21, 25, 0.32)");
+      .attr("flood-color", "rgba(25, 23, 20, 0.32)");
   }
 }
