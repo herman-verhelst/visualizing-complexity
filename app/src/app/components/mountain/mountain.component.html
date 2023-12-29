@@ -1,44 +1,89 @@
 @if (edition) {
-  <section class="mountain__container">
-    <div class="mountain__graphs">
-      <div [id]="stagesId">
-        <p class="mountain__info">{{ edition.stageWins }}</p>
-      </div>
-      <div [id]="leadId">
-        <p class="mountain__info">{{ edition.stagesLed }}</p>
-      </div>
-    </div>
+  <section class="mountain__card">
+    <div class="mountain__transform-container">
 
-    <div class="mountain__margin" [id]="marginId">
-      <p class="mountain__info mountain__info--margin px-4">
-        Margin:
-        @if (edition.margin.hours) {
-          <span>
+      <div class="mountain__container" [ngClass]="{'extra-information--visible': extraInfoVisible}">
+        <div class="mountain__default">
+          <div class="mountain__graphs">
+            <div [id]="stagesId">
+              <p class="mountain__detail">{{ edition.stageWins }}</p>
+            </div>
+            <div [id]="leadId">
+              <p class="mountain__detail">{{ edition.stagesLed }}</p>
+            </div>
+          </div>
+
+          <div class="mountain__margin" [id]="marginId">
+            <p class="mountain__detail mountain__detail--margin px-4">
+              Margin:
+              @if (edition.margin.hours) {
+                <span>
             {{ edition.margin.hours }}h
           </span>
-        }
-        @if (edition.margin.minutes) {
-          <span>
+              }
+              @if (edition.margin.minutes) {
+                <span>
             {{ edition.margin.minutes }}min
           </span>
-        }
-        @if (edition.margin.seconds) {
-          <span>
+              }
+              @if (edition.margin.seconds) {
+                <span>
             {{ edition.margin.seconds }}s
           </span>
-        }
-      </p>
+              }
+            </p>
+          </div>
+
+          <div class="mountain__default-information">
+            <div class="flex flex-col items-end">
+              <p class="winner">
+                <span class="mr-2 font-bold">{{ edition.year }}</span>
+                <span class="mr-2 divider"></span>
+                <span class="mr-1">{{ firstName }}</span>
+                <span class="font-bold">{{ lastName }}</span>
+              </p>
+              <p class="team">{{ edition.winner.team }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mountain__extra-information">
+          <div class="extra-information__container">
+            <div class="flex">
+              <p class="label">Number of stages</p>
+              <p class="value">{{ edition.totalStages }}</p>
+            </div>
+
+            <div class="flex">
+              <p class="label">Distance</p>
+              <p class="value">{{ edition.distance }}km</p>
+            </div>
+          </div>
+
+          <div class="extra-information__container">
+            <div class="flex">
+              <p class="label">Total time</p>
+              <p class="value">{{ edition.time.hours }}h {{ edition.time.minutes }}min {{ edition.time.seconds }}s </p>
+            </div>
+
+            <div class="flex">
+              <p class="label">Average speed</p>
+              <p class="value">{{ edition.distance }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-      <div class="flex flex-col items-end">
-        <p class="winner">
-          <span class="mr-2 font-bold">{{ edition.year }}</span>
-          <span class="mr-2 font-bold divider"></span>
-          <span class="mr-1">{{ firstName }}</span>
-          <span class="font-bold">{{ lastName }}</span>
-        </p>
-        <p class="team">{{ edition.winner.team }}</p>
-      </div>
+    <div class="extra-information__button" (mouseenter)="revealInformation()" (mouseleave)="revealInformation()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+        <path
+          d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
+      </svg>
+    </div>
+
   </section>
+
+
 }
 

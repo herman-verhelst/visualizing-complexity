@@ -3,11 +3,14 @@ import {AfterViewInit, Component, ElementRef, Input, OnInit} from '@angular/core
 import {Edition} from "../../models/edition";
 import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-mountain',
   standalone: true,
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './mountain.component.html',
   styleUrl: './mountain.component.scss'
 })
@@ -31,6 +34,8 @@ export class MountainComponent implements OnInit, AfterViewInit {
   graphColor1: string = '#E9E7E0';
   graphColor2: string = '#54534F';
   graphBorderColor: string = '#929085';
+
+  extraInfoVisible: boolean = false
 
   constructor(private element: ElementRef) {
   }
@@ -248,5 +253,9 @@ export class MountainComponent implements OnInit, AfterViewInit {
       .attr("dy", 0)
       .attr("stdDeviation", 4)
       .attr("flood-color", "rgba(25, 23, 20, 0.32)");
+  }
+
+  revealInformation() {
+    this.extraInfoVisible = !this.extraInfoVisible;
   }
 }
