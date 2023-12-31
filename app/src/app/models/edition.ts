@@ -1,4 +1,4 @@
-import {AppTime} from "./appTime";
+import {AppTime} from "./app-time";
 import {Winner} from "./winner";
 
 export interface Edition {

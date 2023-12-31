@@ -1,0 +1,86 @@
+<div class="sort__container">
+  <div class="sort" (click)="dropdownVisible = !dropdownVisible">
+    <span class="sort__selected-option">
+      @if (selectedDirection === SortDirection.ASCENDING) {
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
+          d="M3.47 7.78a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018L9 4.81v7.44a.75.75 0 0 1-1.5 0V4.81L4.53 7.78a.75.75 0 0 1-1.06 0Z"></path></svg>
+      } @else {
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
+          d="M13.03 8.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.47 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l2.97 2.97V3.75a.75.75 0 0 1 1.5 0v7.44l2.97-2.97a.75.75 0 0 1 1.06 0Z"></path></svg>
+      }
+      {{ selectedOption.displayName }}
+    </span>
+
+    <svg class="chevron" [ngClass]="{'chevron--up': dropdownVisible}" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 16 16" width="16" height="16">
+      <path
+        d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+    </svg>
+
+  </div>
+  <div class="dropdown" [attr.aria-expanded]="dropdownVisible">
+    <div class="dropdown__options">
+      <button class="dropdown__button" (click)="changeSelectedOption(SortOption.YEAR)"
+              [ngClass]="{'dropdown__button--selected': selectedOption === SortOption.YEAR}">
+        <div class="radio-button" [ngClass]="{'radio-button--selected': selectedOption === SortOption.YEAR}">
+          <div></div>
+        </div>
+        Year
+      </button>
+      <button class="dropdown__button" (click)="changeSelectedOption(SortOption.MARGIN)"
+              [ngClass]="{'dropdown__button--selected': selectedOption === SortOption.MARGIN}">
+        <div class="radio-button" [ngClass]="{'radio-button--selected': selectedOption === SortOption.MARGIN}">
+          <div></div>
+        </div>
+        Margin
+      </button>
+      <button class="dropdown__button" (click)="changeSelectedOption(SortOption.STAGES_WON)"
+              [ngClass]="{'dropdown__button--selected': selectedOption === SortOption.STAGES_WON}">
+        <div class="radio-button" [ngClass]="{'radio-button--selected': selectedOption === SortOption.STAGES_WON}">
+          <div></div>
+        </div>
+        Stages won
+      </button>
+      <button class="dropdown__button" (click)="changeSelectedOption(SortOption.LEADERS_JERSEY)"
+              [ngClass]="{'dropdown__button--selected': selectedOption === SortOption.LEADERS_JERSEY}">
+        <div class="radio-button" [ngClass]="{'radio-button--selected': selectedOption === SortOption.LEADERS_JERSEY}">
+          <div></div>
+        </div>
+        Leaders jersey
+      </button>
+    </div>
+    <div class="dropdown__order">
+      <button class="dropdown__button dropdown__button--direction"
+              (click)="changeSelectedDirection(SortDirection.ASCENDING)"
+              [ngClass]="{'dropdown__button--selected': selectedDirection === SortDirection.ASCENDING}">
+        <div class="flex gap-4 items-center">
+          <div class="radio-button"
+               [ngClass]="{'radio-button--selected': selectedDirection === SortDirection.ASCENDING}">
+            <div></div>
+          </div>
+          Ascending
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+          <path
+            d="M3.47 7.78a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018L9 4.81v7.44a.75.75 0 0 1-1.5 0V4.81L4.53 7.78a.75.75 0 0 1-1.06 0Z"></path>
+        </svg>
+      </button>
+      <button class="dropdown__button dropdown__button--direction"
+              (click)="changeSelectedDirection(SortDirection.DESCENDING)"
+              [ngClass]="{'dropdown__button--selected': selectedDirection === SortDirection.DESCENDING}">
+        <div class="flex gap-4 items-center">
+          <div class="radio-button"
+               [ngClass]="{'radio-button--selected': selectedDirection === SortDirection.DESCENDING}">
+            <div></div>
+          </div>
+          Descending
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+          <path
+            d="M13.03 8.22a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L3.47 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l2.97 2.97V3.75a.75.75 0 0 1 1.5 0v7.44l2.97-2.97a.75.75 0 0 1 1.06 0Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+

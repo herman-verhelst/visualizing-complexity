@@ -1,4 +1,8 @@
-@for (edition of editions; track edition.edition) {
+<app-sort></app-sort>
+
+
+
+@for (edition of editions | sort:sort; track edition.edition) {
   <app-mountain [edition]="edition" [margins]="margins"></app-mountain>
 } @empty {
   No data

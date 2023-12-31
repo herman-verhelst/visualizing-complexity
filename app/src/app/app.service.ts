@@ -2,6 +2,10 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, filter, map, Observable} from "rxjs";
 import {Edition} from "./models/edition";
+import {Sort} from "./models/sort";
+import {SortDirection} from "./models/sort-direction";
+import SortOption from "./models/sort-option";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +14,12 @@ export class AppService {
 
   private _dataSubject = new BehaviorSubject<Edition[]>([]);
   data$ = this._dataSubject.asObservable();
+
+  private _sort = new BehaviorSubject<Sort>({
+    direction: SortDirection.ASCENDING,
+    option: SortOption.YEAR
+  })
+  sort$ = this._sort.asObservable();
 
   get data(): Edition[] {
     return this._dataSubject.value;
@@ -32,6 +42,15 @@ export class AppService {
     );
   }
 
+  get sort(): Sort {
+    return this._sort.value;
+  }
+
+  setSort(sort: Sort): void {
+    console.log('sort')
+    this._sort.next(sort)
+  }
+
   constructor(private httpClient: HttpClient) {
   }
 
@@ -41,5 +60,9 @@ export class AppService {
       .subscribe(
         data => this.setData(data)
       );
+  }
+
+  updateSort(sort: Sort): void {
+    this.setSort(sort);
   }
 }
