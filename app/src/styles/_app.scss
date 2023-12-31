@@ -27,10 +27,12 @@ html {
   background-color: var(--color-background-900);
   background-image: var(--gradient-background);
   color: var(--color-text);
+  min-height: 100%;
 }
 
 body {
   max-width: 1400px;
+  margin: 0 auto;
   padding: 1rem;
   overflow-y: scroll;
 }
@@ -70,6 +72,63 @@ p {
   }
 }
 
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  border-radius: .25rem;
+  border: 1px solid var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-900);
+  transition: var(--transition) background-color;
+
+  svg {
+    fill: var(--color-primary-900);
+  }
+
+  &--selected {
+    background-color: var(--color-text);
+  }
+}
+
+input {
+  width: 100%;
+  border-radius: .5rem;
+  background-color: transparent;
+  padding: 1rem 1.5rem 1rem 3.75rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid var(--color-primary-900);
+}
+
+input, button {
+  &:focus-visible {
+    outline: none;
+    border-color: var(--color-primary-700);
+  }
+}
+
 svg {
   fill: var(--color-text);
+}
+
+.empty-message {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3.75rem;
+}
+
+.app {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__mountains {
+    margin-bottom: 30vh;
+  }
 }

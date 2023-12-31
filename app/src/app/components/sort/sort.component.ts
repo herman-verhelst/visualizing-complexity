@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, HostListener} from '@angular/core';
 import {NgClass} from "@angular/common";
 import {SortDirection} from "../../models/sort-direction";
 import SortOption from "../../models/sort-option";
@@ -16,16 +16,27 @@ import {AppService} from "../../app.service";
 export class SortComponent {
   dropdownVisible: boolean = false;
   selectedOption: SortOption = SortOption.YEAR;
-  selectedDirection: SortDirection = SortDirection.ASCENDING;
+  selectedDirection: SortDirection = SortDirection.DESCENDING;
 
   protected readonly SortDirection = SortDirection;
   protected readonly SortOption = SortOption;
 
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService, private element: ElementRef) {
+  }
+
+  @HostListener('document:click', ['$event'])
+  clickOut(event: any) {
+    if (!this.element.nativeElement.contains(event.target)) {
+      this.dropdownVisible = false;
+    }
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onKeydownHandler() {
+    this.dropdownVisible = false;
   }
 
   changeSelectedOption(option: SortOption) {
-    this.dropdownVisible = false;
     this.selectedOption = option;
     this.appService.updateSort({
       direction: this.selectedDirection,
@@ -34,7 +45,6 @@ export class SortComponent {
   }
 
   changeSelectedDirection(direction: SortDirection) {
-    this.dropdownVisible = false;
     this.selectedDirection = direction;
     this.appService.updateSort({
       direction: this.selectedDirection,

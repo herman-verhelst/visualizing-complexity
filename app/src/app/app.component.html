@@ -1,9 +1,25 @@
-<app-sort></app-sort>
+<div class="app__container">
+  @if (editions.length > 0) {
+    <div class="filters">
+      <app-search class="filters__search" [selectedEditions]="selectedEditions"></app-search>
+      <app-sort class="filters__sort"></app-sort>
+    </div>
 
+    <div class="selected-edition__container">
+      @for (selectedEdition of selectedEditions;track selectedEdition.edition) {
+        @if (selectedEdition.selected) {
+          <app-selected-edition [selectedEdition]="selectedEdition"></app-selected-edition>
+        }
+      }
+    </div>
+  }
 
+  <div class="app__mountains">
+    @for (edition of editions | sort:changeCount:sort:selectedEditions;track edition.edition) {
+      <app-mountain [edition]="edition" [margins]="margins"></app-mountain>
+    } @empty {
+      No data
+    }
+  </div>
 
-@for (edition of editions | sort:sort; track edition.edition) {
-  <app-mountain [edition]="edition" [margins]="margins"></app-mountain>
-} @empty {
-  No data
-}
+</div>

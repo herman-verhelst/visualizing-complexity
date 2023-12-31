@@ -1,0 +1,26 @@
+.selected-edition {
+  border-radius: .5rem;
+  background-color: var(--color-primary-900);
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-primary-900);
+  width: fit-content;
+
+  &__button {
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

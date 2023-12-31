@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject, filter, map, Observable} from "rxjs";
+import {BehaviorSubject, map} from "rxjs";
 import {Edition} from "./models/edition";
 import {Sort} from "./models/sort";
 import {SortDirection} from "./models/sort-direction";
 import SortOption from "./models/sort-option";
+import {SelectedEdition} from "./models/selected-edition";
 
 
 @Injectable({
@@ -15,8 +16,11 @@ export class AppService {
   private _dataSubject = new BehaviorSubject<Edition[]>([]);
   data$ = this._dataSubject.asObservable();
 
+  private _selectedEditions = new BehaviorSubject<SelectedEdition[]>([]);
+  selectedEditions$ = this._selectedEditions.asObservable();
+
   private _sort = new BehaviorSubject<Sort>({
-    direction: SortDirection.ASCENDING,
+    direction: SortDirection.DESCENDING,
     option: SortOption.YEAR
   })
   sort$ = this._sort.asObservable();
@@ -27,19 +31,36 @@ export class AppService {
 
   setData(newData: Edition[]): void {
     this._dataSubject.next(newData);
+    this._selectedEditions.next(
+      newData.map(edition => {
+        return {
+          selected: false,
+          edition: edition.edition,
+          year: edition.year,
+          winnerFirstName: edition.winner.firstName,
+          winnerLastName: edition.winner.lastName,
+        } as SelectedEdition
+      })
+    )
   }
 
-  getMinAndMaxMarginTime(): Observable<{ min: number; max: number }> {
-    return this.data$.pipe(
-      filter(data => data.length > 0),
-      map(editions => {
-        const marginTimes = editions.map(edition => edition.marginNumber);
-        const minMarginTime = Math.min(...marginTimes);
-        const maxMarginTime = Math.max(...marginTimes);
+  getMinAndMaxMarginTime(): { min: number; max: number } {
+    let minMargin = 100,
+      maxMargin: number = 0;
 
-        return { min: minMarginTime, max: maxMarginTime };
+    this._dataSubject.value
+      .filter(edition => {
+        const filteredSelectedEditions: SelectedEdition[] = this._selectedEditions.value.filter(e => e.selected);
+        if (filteredSelectedEditions.length === 0) return true;
+        return filteredSelectedEditions.find(fe => fe.edition === edition.edition)
       })
-    );
+      .forEach(edition => {
+        if (edition.marginNumber > maxMargin) maxMargin = edition.marginNumber;
+        if (edition.marginNumber < minMargin) minMargin = edition.marginNumber;
+      })
+
+    return {min: minMargin, max: maxMargin};
+
   }
 
   get sort(): Sort {
@@ -47,8 +68,11 @@ export class AppService {
   }
 
   setSort(sort: Sort): void {
-    console.log('sort')
     this._sort.next(sort)
+  }
+
+  setSelectedEditions(selectedEditions: SelectedEdition[]): void {
+    this._selectedEditions.next(selectedEditions)
   }
 
   constructor(private httpClient: HttpClient) {
@@ -57,6 +81,16 @@ export class AppService {
   fetchData(): void {
     this.httpClient
       .get<Edition[]>('assets/formatted-data.json')
+      .pipe(
+        map((data: Edition[]): Edition[] => {
+          data.forEach(edition => {
+            const nameArray = edition.winner.name.split(' ');
+            edition.winner.firstName = nameArray[0]
+            edition.winner.lastName = nameArray.slice(1).join(' ');
+          })
+          return data
+        })
+      )
       .subscribe(
         data => this.setData(data)
       );
@@ -64,5 +98,14 @@ export class AppService {
 
   updateSort(sort: Sort): void {
     this.setSort(sort);
+  }
+
+  updateSelectedEdition(edition: SelectedEdition): void {
+    const selectedEditions = this._selectedEditions.value
+    const foundEdition = selectedEditions.find(e => e.edition === edition.edition);
+
+    if (!foundEdition) return;
+    foundEdition.selected = !foundEdition.selected;
+    this.setSelectedEditions(selectedEditions);
   }
 }

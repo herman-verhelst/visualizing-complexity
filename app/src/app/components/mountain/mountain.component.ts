@@ -1,5 +1,5 @@
 //@ts-nocheck
-import {AfterViewInit, Component, ElementRef, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Edition} from "../../models/edition";
 import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
@@ -14,7 +14,7 @@ import {NgClass} from "@angular/common";
   templateUrl: './mountain.component.html',
   styleUrl: './mountain.component.scss'
 })
-export class MountainComponent implements OnInit, AfterViewInit {
+export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input({required: true}) edition?: Edition;
   @Input({required: true}) margins: { min: number, max: number }
@@ -22,9 +22,6 @@ export class MountainComponent implements OnInit, AfterViewInit {
   stagesId: string;
   leadId: string;
   marginId: string;
-
-  firstName: string;
-  lastName: string;
 
   mountainSize: number = 5;
   marginSpacingLeft: number = this.mountainSize * 2;
@@ -37,6 +34,8 @@ export class MountainComponent implements OnInit, AfterViewInit {
 
   extraInfoVisible: boolean = false
 
+  finishedFirstRender: boolean = false;
+
   constructor(private element: ElementRef) {
   }
 
@@ -44,15 +43,19 @@ export class MountainComponent implements OnInit, AfterViewInit {
     this.stagesId = `graph-stages-${this.edition?.edition}`;
     this.leadId = `graph-lead-${this.edition?.edition}`;
     this.marginId = `graph-margin-${this.edition?.edition}`;
-
-    const nameArray = this.edition?.winner.name.split(' ');
-    this.firstName = nameArray[0]
-    this.lastName = nameArray.slice(1).join(' ');
   }
 
   ngAfterViewInit() {
     if (this.edition) {
       this.createGraph()
+      this.createMargin()
+    }
+    this.finishedFirstRender = true;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.finishedFirstRender) {
+      d3.select(`#${this.marginId} > svg`).remove();
       this.createMargin()
     }
   }

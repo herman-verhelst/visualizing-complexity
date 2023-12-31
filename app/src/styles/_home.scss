@@ -1,0 +1,12 @@
+.filters {
+  display: flex;
+  gap: .5rem;
+
+  &__search {
+    width: 100%;
+  }
+
+  &__sort {
+    min-width: 20rem;
+  }
+}
