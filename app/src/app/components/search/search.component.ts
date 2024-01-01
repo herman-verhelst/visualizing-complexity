@@ -41,7 +41,6 @@ export class SearchComponent {
 
   changeSelected(edition: SelectedEdition) {
     this.appService.updateSelectedEdition(edition);
-    this.searchKeyword = ''
   }
 
   onSearchFocus() {

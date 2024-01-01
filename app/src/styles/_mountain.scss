@@ -11,6 +11,15 @@
     margin-bottom: 1rem;
     overflow: hidden;
     max-width: 100%;
+    position: relative;
+  }
+
+  &__gradient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 
   &__transform-container {
@@ -135,7 +144,8 @@
       top: 0;
       bottom: 0;
       width: 1px;
-      background-color: var(--color-primary-900);
+      background-color: var(--color-text);
+      opacity: .1;
     }
   }
 

@@ -3,13 +3,14 @@ import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleCh
 import {Edition} from "../../models/edition";
 import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
-import {NgClass} from "@angular/common";
+import {NgClass, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-mountain',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    NgStyle
   ],
   templateUrl: './mountain.component.html',
   styleUrl: './mountain.component.scss'

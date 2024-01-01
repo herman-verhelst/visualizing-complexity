@@ -1,5 +1,9 @@
 @if (edition) {
   <section class="mountain__card">
+    @if (edition.multipleWins) {
+      <div class="mountain__gradient" [ngStyle]="{'background': edition.backgroundGradient?.getGradient()}"></div>
+    }
+
     <div class="mountain__transform-container">
 
       <div class="mountain__container" [ngClass]="{'extra-information--visible': extraInfoVisible}">

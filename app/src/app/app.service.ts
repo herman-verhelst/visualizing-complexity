@@ -6,6 +6,8 @@ import {Sort} from "./models/sort";
 import {SortDirection} from "./models/sort-direction";
 import SortOption from "./models/sort-option";
 import {SelectedEdition} from "./models/selected-edition";
+import {Winner} from "./models/winner";
+import Gradient from "./models/gradient";
 
 
 @Injectable({
@@ -83,11 +85,35 @@ export class AppService {
       .get<Edition[]>('assets/formatted-data.json')
       .pipe(
         map((data: Edition[]): Edition[] => {
+          const editions: Edition[] = [],
+            gradients: Gradient[] = Object.values(Gradient);
+          let current: number = 0;
+
+          console.log(gradients)
+
           data.forEach(edition => {
             const nameArray = edition.winner.name.split(' ');
             edition.winner.firstName = nameArray[0]
             edition.winner.lastName = nameArray.slice(1).join(' ');
+
+            const foundEdition = editions.find(e => edition.winner.name === e.winner.name)
+            if (foundEdition) {
+              foundEdition.multipleWins = true;
+              edition.multipleWins = true;
+
+              console.log(foundEdition.backgroundGradient)
+              if (foundEdition.backgroundGradient) {
+                edition.backgroundGradient = foundEdition.backgroundGradient;
+              } else {
+                console.log('here')
+                foundEdition.backgroundGradient = gradients[current];
+                edition.backgroundGradient = gradients[current];
+                current++;
+              }
+            } else editions.push(edition)
           })
+
+          console.log(data)
           return data
         })
       )

@@ -55,12 +55,20 @@
     gap: 1rem;
     border-radius: .25rem;
 
+    &:hover {
+      background-color: var(--color-primary-700-5);
+    }
+
     &:not(:last-child) {
       margin-bottom: .25rem;
     }
 
     &--selected {
       background-color: var(--color-primary-700);
+
+      &:hover {
+        background-color: var(--color-primary-700);
+      }
     }
 
     &--direction {
