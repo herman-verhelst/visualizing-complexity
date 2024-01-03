@@ -1,0 +1,63 @@
+<div (click)="closeModal()" class="modal__backdrop" [attr.aria-expanded]="visible"></div>
+<div class="modal">
+
+  <div class="modal__header">
+    <h2>How to read the information?</h2>
+    <button (click)="closeModal()" class="modal__close-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+        <path
+          d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div>
+    @if (lastEdition) {
+      <div class="help__info--mountains">
+        <p class="mb-4">
+          The mountains represent the number of stages that the rider has won or has worn the yellow leaders jersey in
+          that Tour de France.
+        </p>
+        <div class="line__container">
+          <div class="line line--h line--hsl"></div>
+          <div class="line line--v line--vsl"></div>
+          <p class="font-bold">
+            Number of stages in lead
+          </p>
+        </div>
+        <div class="line__container">
+          <div class="line line--h line--hsw"></div>
+          <div class="line line--v line--vsw"></div>
+          <p class="font-bold">Number of stages won</p>
+        </div>
+      </div>
+
+      <app-mountain
+        class="my-4 block"
+        [hoverable]="false"
+        [movable]="false"
+        [edition]="lastEdition"
+        [margins]="margins">
+      </app-mountain>
+
+      <div class="help__info--bottom">
+        <div class="help__info--road line__container">
+          <div class="line line--h line--hr"></div>
+          <div class="line line--v line--vr"></div>
+          <p>
+            The length of the road indicates the margin that the first rider had over the second at the end of the race.
+          </p>
+        </div>
+
+        <div class="help__info--color line__container">
+          <div class="line line--h line--hc"></div>
+          <div class="line line--v line--vc"></div>
+          <p>
+            Every rider with more than one Tour de France win, is given a colour.
+          </p>
+        </div>
+      </div>
+
+    }
+  </div>
+</div>

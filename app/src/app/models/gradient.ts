@@ -42,6 +42,8 @@ export default class Gradient {
   static readonly G19 = new Gradient('#8E5C5C');
   static readonly G20 = new Gradient('#C67B56');
   static readonly G21 = new Gradient('#6e6653');
+  static readonly G22 = new Gradient('#853523');
+  static readonly G23 = new Gradient('#a9840c');
   private constructor(public color: string) {
   }
 

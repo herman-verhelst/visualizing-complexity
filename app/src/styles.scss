@@ -4,7 +4,10 @@
 @tailwind utilities;
 
 @import "./styles/app";
+@import "./styles/help";
 @import "./styles/home";
+@import "./styles/loading";
+@import "./styles/modal";
 @import "./styles/mountain";
 @import "./styles/search";
 @import "./styles/selected-edition";

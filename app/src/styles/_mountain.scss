@@ -8,7 +8,6 @@
     display: flex;
     gap: 2rem;
     align-items: stretch;
-    margin-bottom: 1rem;
     overflow: hidden;
     max-width: 100%;
     position: relative;
@@ -38,6 +37,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    &--ei-visible {
+      .mountain__detail {
+        opacity: 1;
+      }
+    }
 
     &:hover {
       .mountain__detail {
