@@ -4,6 +4,7 @@ import {Edition} from "../../models/edition";
 import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
 import {NgClass, NgStyle} from "@angular/common";
+import {v4 as uuidv4} from 'uuid';
 
 @Component({
   selector: 'app-mountain',
@@ -17,8 +18,10 @@ import {NgClass, NgStyle} from "@angular/common";
 })
 export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
 
+  @Input hoverable: boolean = true;
+  @Input movable: boolean = true;
   @Input({required: true}) edition?: Edition;
-  @Input({required: true}) margins: { min: number, max: number }
+  @Input({required: true}) margins: { min: number, max: number } | undefined
 
   stagesId: string;
   leadId: string;
@@ -41,9 +44,10 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngOnInit(): void {
-    this.stagesId = `graph-stages-${this.edition?.edition}`;
-    this.leadId = `graph-lead-${this.edition?.edition}`;
-    this.marginId = `graph-margin-${this.edition?.edition}`;
+    const uuid = uuidv4()
+    this.stagesId = `graph-stages-${uuid}`;
+    this.leadId = `graph-lead-${uuid}`;
+    this.marginId = `graph-margin-${uuid}`;
   }
 
   ngAfterViewInit() {

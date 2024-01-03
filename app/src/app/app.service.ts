@@ -89,8 +89,6 @@ export class AppService {
             gradients: Gradient[] = Object.values(Gradient);
           let current: number = 0;
 
-          console.log(gradients)
-
           data.forEach(edition => {
             const nameArray = edition.winner.name.split(' ');
             edition.winner.firstName = nameArray[0]
@@ -101,11 +99,9 @@ export class AppService {
               foundEdition.multipleWins = true;
               edition.multipleWins = true;
 
-              console.log(foundEdition.backgroundGradient)
               if (foundEdition.backgroundGradient) {
                 edition.backgroundGradient = foundEdition.backgroundGradient;
               } else {
-                console.log('here')
                 foundEdition.backgroundGradient = gradients[current];
                 edition.backgroundGradient = gradients[current];
                 current++;
@@ -113,7 +109,6 @@ export class AppService {
             } else editions.push(edition)
           })
 
-          console.log(data)
           return data
         })
       )
