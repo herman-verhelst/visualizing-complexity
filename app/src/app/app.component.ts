@@ -39,7 +39,10 @@ export class AppComponent implements OnInit {
       this.margins = this.appService.getMinAndMaxMarginTime();
     });
 
-    this.appService.sort$.subscribe((sort) => this.sort = sort);
+    this.appService.sort$.subscribe((sort) => {
+      this.changeCount++;
+      this.sort = sort
+    });
     this.appService.selectedEditions$.subscribe(editions => {
       this.changeCount++;
       this.selectedEditions = editions;

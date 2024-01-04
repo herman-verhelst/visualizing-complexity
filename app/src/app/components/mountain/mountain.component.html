@@ -1,5 +1,5 @@
 @if (edition) {
-  <section class="mountain__card" [ngClass]="{'!pr-8': !movable}">
+  <section class="mountain__card" [id]="cardId" [ngClass]="{'!pr-8': !movable}">
     @if (edition.multipleWins) {
       <div class="mountain__gradient" [ngStyle]="{'background': edition.backgroundGradient?.getGradient()}"></div>
     }

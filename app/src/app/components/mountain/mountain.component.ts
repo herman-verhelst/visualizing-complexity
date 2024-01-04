@@ -5,6 +5,8 @@ import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
 import {NgClass, NgStyle} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 @Component({
   selector: 'app-mountain',
@@ -20,12 +22,14 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input hoverable: boolean = true;
   @Input movable: boolean = true;
+  @Input changeCount: number = 0;
   @Input({required: true}) edition?: Edition;
   @Input({required: true}) margins: { min: number, max: number } | undefined
 
   stagesId: string;
   leadId: string;
   marginId: string;
+  cardId: string;
 
   mountainSize: number = 5;
   marginSpacingLeft: number = this.mountainSize * 2;
@@ -36,9 +40,12 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   graphColor2: string = '#54534F';
   graphBorderColor: string = '#929085';
 
+  graphAnimationDuration: number = 500;
+
   extraInfoVisible: boolean = false
 
   finishedFirstRender: boolean = false;
+  triggeredCard: boolean = false;
 
   constructor(private element: ElementRef) {
   }
@@ -48,20 +55,77 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.stagesId = `graph-stages-${uuid}`;
     this.leadId = `graph-lead-${uuid}`;
     this.marginId = `graph-margin-${uuid}`;
+    this.cardId = `card-${uuid}`;
+  }
+
+  private createGsapAnimations(): void {
+
+    gsap.fromTo(
+      `#${this.cardId}`,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: `#${this.cardId}`,
+          start: "top 95%",
+          end: "bottom top",
+          toggleActions: "play reverse restart reverse",
+        },
+        duration: .1
+      }
+    );
+
+    ScrollTrigger.create({
+      trigger: `#${this.cardId}`,
+      start: "top 95%",
+      end: "bottom top",
+      onEnter: () => {
+        if (!this.triggeredCard) {
+          this.createGraph()
+          this.createMargin()
+        }
+        this.triggeredCard = true;
+      },
+      onLeave: () => {
+        d3.select(`#${this.leadId} > svg`).remove();
+        d3.select(`#${this.stagesId} > svg`).remove();
+        d3.select(`#${this.marginId} > svg`).remove();
+        this.triggeredCard = false;
+      },
+      onEnterBack: () => {
+        if (!this.triggeredCard) {
+          this.createGraph()
+          this.createMargin()
+        }
+        this.triggeredCard = true;
+      },
+      onLeaveBack: () => {
+        d3.select(`#${this.leadId} > svg`).remove();
+        d3.select(`#${this.stagesId} > svg`).remove();
+        d3.select(`#${this.marginId} > svg`).remove();
+        this.triggeredCard = false;
+      },
+    })
   }
 
   ngAfterViewInit() {
     if (this.edition) {
-      this.createGraph()
-      this.createMargin()
+      this.createGsapAnimations();
     }
     this.finishedFirstRender = true;
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (this.finishedFirstRender) {
+    if (this.finishedFirstRender && this.triggeredCard) {
+      ScrollTrigger.getAll().forEach(trigger => {
+        trigger.refresh();
+      });
       d3.select(`#${this.marginId} > svg`).remove();
-      this.createMargin()
+      this.createMargin();
     }
   }
 
@@ -87,26 +151,35 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.createGraphGradient(svg)
     this.createShadow(svg)
 
-    svg.append("rect")
+    const rect = svg.append("rect")
       .attr("x", remWidth * this.marginSpacingLeft)
       .attr("y", 0)
       .attr("rx", height / 2)
       .attr("ry", height / 2)
-      .attr("width", calculatedFactor * this.edition?.marginNumber)
+      .attr("width", 0)
       .attr("height", height)
       .attr('fill', 'url(#graphGradient)')
       .attr('stroke', this.graphBorderColor)
       .attr('stroke-width', 1)
       .style("filter", "url(#area-shadow)");
 
-    svg.append("rect")
+    rect.transition()
+      .duration(this.graphAnimationDuration)
+      .ease(d3.easeCubicInOut)
+      .attr("width", calculatedFactor * this.edition?.marginNumber)
+
+    const border = svg.append("rect")
       .attr("x", 0)
       .attr("y", height - 1)
-      .attr("width", calculatedFactor * this.edition?.marginNumber + this.marginSpacingLeft * remWidth)
+      .attr("width", this.marginSpacingLeft * remWidth)
       .attr("height", 1)
-      .attr('fill', 'red')
       .attr('stroke', this.graphBorderColor)
       .attr('stroke-width', 1);
+
+    border.transition()
+      .duration(this.graphAnimationDuration)
+      .ease(d3.easeCubicInOut)
+      .attr("width", calculatedFactor * this.edition?.marginNumber + this.marginSpacingLeft * remWidth)
   }
 
   createGraph(): void {
@@ -157,6 +230,12 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
       {x: 2, y: 0}
     ];
 
+    let ground = [
+      {x: 0, y: 0},
+      {x: 1, y: 0},
+      {x: 2, y: 0}
+    ];
+
     const xScale = d3.scaleLinear()
       .domain([0, d3.max(stagesData, d => d.x)])
       .range([0, width]);
@@ -196,15 +275,40 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
       .attr('fill', 'url(#graphGradient)')
       .attr('stroke', this.graphBorderColor)
       .attr('stroke-width', 1)
-      .style("filter", "url(#area-shadow)");
+      .style("filter", "url(#area-shadow)")
+      .transition()
+      .duration(this.graphAnimationDuration)
+      .attr('d', area)
+      .attrTween('d', function () {
+        const interpolate = d3.interpolateArray(ground, stagesData);
+        const easing = d3.easeCubicInOut;
+        return function (t) {
+          t = easing(t);
+          return area(interpolate(t));
+        };
+      });
 
     leadSvg.append('path')
       .datum(leadData)
-      .attr('d', area)
       .attr('fill', 'url(#graphGradient)')
       .attr('stroke', this.graphBorderColor)
       .attr('stroke-width', 1)
-      .style("filter", "url(#area-shadow)");
+      .style("filter", "url(#area-shadow)")
+      .transition()
+      .duration(this.graphAnimationDuration)
+      .attr('d', area)
+      .attrTween('d', function () {
+        const interpolator = d3.interpolateArray(ground, leadData);
+        const easing = d3.easeQuadOut;
+        return function (t) {
+          t = easing(t);
+          return area(interpolator(t));
+        };
+      })
+  }
+
+  revealInformation() {
+    this.extraInfoVisible = !this.extraInfoVisible;
   }
 
   private createBaseGradient(svg) {
@@ -221,7 +325,6 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
       .attr("offset", "100%")
       .attr("stop-color", this.baseColor2);
   }
-
 
   private createGraphGradient(svg) {
     const graphGradient = svg.append('defs')
@@ -261,9 +364,5 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
       .attr("dy", 0)
       .attr("stdDeviation", 4)
       .attr("flood-color", "rgba(25, 23, 20, 0.32)");
-  }
-
-  revealInformation() {
-    this.extraInfoVisible = !this.extraInfoVisible;
   }
 }
