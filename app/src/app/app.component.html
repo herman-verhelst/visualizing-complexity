@@ -16,7 +16,7 @@
 
     <div class="app__mountains">
       @for (edition of editions | sort:changeCount:sort:selectedEditions;track edition.edition) {
-        <app-mountain [edition]="edition" [margins]="margins"></app-mountain>
+        <app-mountain [changeCount]="changeCount" [edition]="edition" [margins]="margins"></app-mountain>
       }
     </div>
 
