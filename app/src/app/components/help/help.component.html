@@ -1,5 +1,5 @@
-<div (click)="closeModal()" class="modal__backdrop" [attr.aria-expanded]="visible"></div>
-<div class="modal">
+<div (click)="closeModal()" class="modal__backdrop" [ngClass]="{'modal--closing': closing}"></div>
+<div class="modal" [ngClass]="{'modal--closing': closing}">
 
   <div class="modal__header">
     <h2>How to read the information?</h2>

@@ -19,6 +19,7 @@ import {SearchPipe} from "../../pipes/search.pipe";
 export class SearchComponent {
   @Input({required: true}) selectedEditions: SelectedEdition[] = [];
   searchVisible: boolean = false;
+  searchClosing: boolean = false;
   searchFocus: boolean = false;
 
   searchKeyword: string = '';
@@ -29,14 +30,24 @@ export class SearchComponent {
   @HostListener('document:click', ['$event'])
   clickOut(event: any) {
     if (!this.element.nativeElement.contains(event.target)) {
-      this.searchVisible = false;
+      this.searchClosing = true;
+      setTimeout(() => {
+        this.searchVisible = false;
+        this.searchClosing = false;
+      }, 200)
     }
   }
 
   @HostListener('document:keydown.escape', ['$event'])
   onKeydownHandler() {
-    if (!this.searchFocus) this.searchVisible = false;
-    this.searchKeyword = ''
+    if (!this.searchFocus) {
+      this.searchKeyword = ''
+      this.searchClosing = true;
+      setTimeout(() => {
+        this.searchVisible = false;
+        this.searchClosing = false;
+      }, 200)
+    }
   }
 
   changeSelected(edition: SelectedEdition) {

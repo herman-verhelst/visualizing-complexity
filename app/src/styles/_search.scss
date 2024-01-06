@@ -14,16 +14,14 @@
   }
 
   &__list {
-    position: absolute;
-    top: calc(100% + .5rem);
     width: 100%;
     max-height: 50vh;
     overflow-y: auto;
     border-radius: .5rem;
-    background-color: var(--color-primary-900);
+    background: var(--gradient-card);
+    border: 1px solid var(--color-primary-900);
     padding: .25rem;
     z-index: 3;
-    box-shadow: var(--shadow-card);
     display: none;
 
     &::-webkit-scrollbar {
@@ -57,10 +55,10 @@
       }
 
       &--selected {
-        background-color: var(--color-primary-700);
+        background-color: var(--color-primary-700-9);
 
         &:hover {
-          background-color: var(--color-primary-700);
+          background-color: var(--color-primary-700-9);
         }
       }
     }

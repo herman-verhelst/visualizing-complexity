@@ -5,6 +5,7 @@ import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
 import {NgClass, NgStyle} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-mountain',
@@ -48,6 +49,63 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.stagesId = `graph-stages-${uuid}`;
     this.leadId = `graph-lead-${uuid}`;
     this.marginId = `graph-margin-${uuid}`;
+    this.cardId = `card-${uuid}`;
+  }
+
+  private createGsapAnimations(): void {
+    if (this.movable) {
+
+      gsap.fromTo(
+        `#${this.cardId}`,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: `#${this.cardId}`,
+            start: "top 95%",
+            end: "bottom top",
+            toggleActions: "play reverse restart reverse",
+          },
+          duration: .1
+        }
+      );
+    }
+
+    ScrollTrigger.create({
+      trigger: `#${this.cardId}`,
+      start: "top 95%",
+      end: "bottom top",
+      onEnter: () => {
+        if (!this.triggeredCard) {
+          this.createGraph()
+          this.createMargin()
+        }
+        this.triggeredCard = true;
+      },
+      onLeave: () => {
+        d3.select(`#${this.leadId} > svg`).remove();
+        d3.select(`#${this.stagesId} > svg`).remove();
+        d3.select(`#${this.marginId} > svg`).remove();
+        this.triggeredCard = false;
+      },
+      onEnterBack: () => {
+        if (!this.triggeredCard) {
+          this.createGraph()
+          this.createMargin()
+        }
+        this.triggeredCard = true;
+      },
+      onLeaveBack: () => {
+        d3.select(`#${this.leadId} > svg`).remove();
+        d3.select(`#${this.stagesId} > svg`).remove();
+        d3.select(`#${this.marginId} > svg`).remove();
+        this.triggeredCard = false;
+      },
+    })
   }
 
   ngAfterViewInit() {
