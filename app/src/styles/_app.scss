@@ -7,6 +7,7 @@
 
   --color-primary-900: #2A2824;
   --color-primary-700: #4B4740;
+  --color-primary-700-9: rgba(74, 70, 63, 0.9);
   --color-primary-700-5: rgba(74, 70, 63, 0.5);
   --color-primary-300: #67645C;
 
@@ -18,7 +19,8 @@
   --shadow-card: 0px 2px 3px 0px rgba(0, 0, 0, 0.30), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
   --shadow-mountain: 0px 0px 16px 0px rgba(25, 23, 20, 0.32);
 
-  --transition: .2s ease-in-out;
+  --animation-duration: .2s;
+  --transition: var(--animation-duration) ease-in-out;
 }
 
 

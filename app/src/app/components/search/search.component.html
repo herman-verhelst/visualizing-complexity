@@ -5,26 +5,30 @@
   </svg>
   <input [(ngModel)]="searchKeyword" type="text" (focus)="onSearchFocus()" (focusout)="onSearchFocusOut()" placeholder="Search year or rider">
 
-  <div class="search__list" [attr.aria-expanded]="searchVisible">
-    @for (edition of selectedEditions | search:searchKeyword; track edition.edition) {
-      <input [id]="edition.edition" type="checkbox" (change)="changeSelected(edition)">
-      <label [for]="edition.edition" [ngClass]="{'search__list-item--selected': edition.selected}" class="search__list-item">
-        <div class="checkbox" [ngClass]="{'checkbox--selected': edition.selected}">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>
-        </div>
+  <div class="dropdown__shadow"  [ngClass]="{'dropdown__shadow--visible': searchVisible && !searchClosing}" >
+    <div class="dropdown__container">
+      <div class="search__list dropdown" [attr.aria-expanded]="searchVisible"  [attr.hidden]="searchClosing">
+        @for (edition of selectedEditions | search:searchKeyword; track edition.edition) {
+          <input [id]="edition.edition" type="checkbox" (change)="changeSelected(edition)">
+          <label [for]="edition.edition" [ngClass]="{'search__list-item--selected': edition.selected}" class="search__list-item">
+            <div class="checkbox" [ngClass]="{'checkbox--selected': edition.selected}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>
+            </div>
 
-        <p class="winner">
-          <span class="mr-2 font-bold">{{ edition.year }}</span>
-          <span class="mr-2 divider"></span>
-          <span class="mr-1">{{ edition.winnerFirstName }}</span>
-          <span class="font-bold">{{ edition.winnerLastName }}</span>
-        </p>
+            <p class="winner">
+              <span class="mr-2 font-bold">{{ edition.year }}</span>
+              <span class="mr-2 divider"></span>
+              <span class="mr-1">{{ edition.winnerFirstName }}</span>
+              <span class="font-bold">{{ edition.winnerLastName }}</span>
+            </p>
 
-      </label>
-    } @empty {
-      <div class="empty-message">
-        No editions found...
+          </label>
+        } @empty {
+          <div class="empty-message">
+            No editions found...
+          </div>
+        }
       </div>
-    }
+    </div>
   </div>
 </div>

@@ -5,8 +5,8 @@ import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
 import {NgClass, NgStyle} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
+import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import gsap from "gsap";
 
 @Component({
   selector: 'app-mountain',
@@ -59,25 +59,26 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   private createGsapAnimations(): void {
-
-    gsap.fromTo(
-      `#${this.cardId}`,
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: `#${this.cardId}`,
-          start: "top 95%",
-          end: "bottom top",
-          toggleActions: "play reverse restart reverse",
+    if (this.movable) {
+      gsap.fromTo(
+        `#${this.cardId}`,
+        {
+          opacity: 0,
+          y: 20,
         },
-        duration: .1
-      }
-    );
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: `#${this.cardId}`,
+            start: "top 95%",
+            end: "bottom top",
+            toggleActions: "play reverse restart reverse",
+          },
+          duration: .1
+        }
+      );
+    }
 
     ScrollTrigger.create({
       trigger: `#${this.cardId}`,

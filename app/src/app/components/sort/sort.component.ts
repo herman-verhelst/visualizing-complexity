@@ -15,9 +15,11 @@ import {AppService} from "../../app.service";
 })
 export class SortComponent {
   dropdownVisible: boolean = false;
-  selectedOption: SortOption = SortOption.YEAR;
-  selectedDirection: SortDirection = SortDirection.DESCENDING;
+  dropdownClosing: boolean = false;
 
+  selectedOption: SortOption = SortOption.YEAR;
+
+  selectedDirection: SortDirection = SortDirection.DESCENDING;
   protected readonly SortDirection = SortDirection;
   protected readonly SortOption = SortOption;
 
@@ -27,13 +29,13 @@ export class SortComponent {
   @HostListener('document:click', ['$event'])
   clickOut(event: any) {
     if (!this.element.nativeElement.contains(event.target)) {
-      this.dropdownVisible = false;
+      this.closeDropdown();
     }
   }
 
   @HostListener('document:keydown.escape', ['$event'])
   onKeydownHandler() {
-    this.dropdownVisible = false;
+    this.closeDropdown();
   }
 
   changeSelectedOption(option: SortOption) {
@@ -50,5 +52,22 @@ export class SortComponent {
       direction: this.selectedDirection,
       option: this.selectedOption,
     })
+  }
+
+  openSort() {
+    if (!this.dropdownVisible) {
+      this.dropdownVisible = true;
+      return;
+    }
+    this.closeDropdown();
+  }
+
+  private closeDropdown(): void {
+    this.dropdownClosing = true
+
+    setTimeout(() => {
+      this.dropdownClosing = false;
+      this.dropdownVisible = false;
+    }, 200)
   }
 }
