@@ -28,7 +28,7 @@
     </button>
 
     @if (helpOpen) {
-      <app-help (closeModalEvent)="closeModal()" [lastEdition]="editions[0]" [visible]="true"></app-help>
+      <app-help (closeModalEvent)="closeModal()" [lastEdition]="lastEdition" [visible]="true"></app-help>
     }
   </div>
 } @else {
