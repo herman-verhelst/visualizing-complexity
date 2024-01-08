@@ -7,6 +7,7 @@ import {NgClass, NgStyle} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import * as lookup from 'country-code-lookup'
 
 @Component({
   selector: 'app-mountain',
@@ -25,6 +26,9 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   @Input changeCount: number = 0;
   @Input({required: true}) edition?: Edition;
   @Input({required: true}) margins: { min: number, max: number } | undefined
+
+  flag: string = '';
+  flagAlt: string = '';
 
   stagesId: string;
   leadId: string;
@@ -56,6 +60,9 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.leadId = `graph-lead-${uuid}`;
     this.marginId = `graph-margin-${uuid}`;
     this.cardId = `card-${uuid}`;
+
+    this.flag = `assets/flags/${lookup.byCountry(this.edition?.winner.nationality).iso2}.svg`;
+    this.flagAlt = `Flag of ${this.edition?.winner.nationality}`
   }
 
   private createGsapAnimations(): void {
