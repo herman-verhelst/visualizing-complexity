@@ -86,7 +86,7 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   @HostListener('window:resize', ['$event'])
   onResize() {
     if (!this.triggeredCard) return;
-    
+
     d3.select(`#${this.marginId} > svg`).remove();
     this.createMargin();
   }
