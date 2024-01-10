@@ -22,6 +22,7 @@ import {LoadingAnimationComponent} from "./components/loading-animation/loading-
 })
 export class AppComponent implements OnInit {
   editions: Edition[] = [];
+  lastEdition?: Edition;
   margins: { min: number, max: number } = {min: 0, max: 100};
   sort?: Sort;
   selectedEditions: SelectedEdition[] = [];
@@ -35,7 +36,8 @@ export class AppComponent implements OnInit {
     this.appService.fetchData();
 
     this.appService.data$.subscribe((editions) => {
-      this.editions = editions
+      this.editions = editions;
+      this.lastEdition = editions[editions.length - 1];
       this.margins = this.appService.getMinAndMaxMarginTime();
     });
 

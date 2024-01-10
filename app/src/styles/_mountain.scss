@@ -127,6 +127,12 @@
       background-color: var(--color-text);
     }
   }
+
+  &__flag {
+    margin-right: .5rem;
+    height: 1rem;
+    width: 1rem;
+  }
 }
 
 .extra-information {

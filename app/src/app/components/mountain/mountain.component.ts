@@ -1,5 +1,5 @@
 //@ts-nocheck
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, Input, OnChanges, OnInit} from '@angular/core';
 import {Edition} from "../../models/edition";
 import * as d3 from 'd3';
 import {convertRemToPixels} from "../../utils/units";
@@ -7,6 +7,7 @@ import {NgClass, NgStyle} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import * as lookup from 'country-code-lookup'
 
 @Component({
   selector: 'app-mountain',
@@ -25,6 +26,9 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   @Input changeCount: number = 0;
   @Input({required: true}) edition?: Edition;
   @Input({required: true}) margins: { min: number, max: number } | undefined
+
+  flag: string = '';
+  flagAlt: string = '';
 
   stagesId: string;
   leadId: string;
@@ -56,61 +60,9 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.leadId = `graph-lead-${uuid}`;
     this.marginId = `graph-margin-${uuid}`;
     this.cardId = `card-${uuid}`;
-  }
 
-  private createGsapAnimations(): void {
-    if (this.movable) {
-      gsap.fromTo(
-        `#${this.cardId}`,
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: `#${this.cardId}`,
-            start: "top 95%",
-            end: "bottom top",
-            toggleActions: "play reverse restart reverse",
-          },
-          duration: .1
-        }
-      );
-    }
-
-    ScrollTrigger.create({
-      trigger: `#${this.cardId}`,
-      start: "top 95%",
-      end: "bottom top",
-      onEnter: () => {
-        if (!this.triggeredCard) {
-          this.createGraph()
-          this.createMargin()
-        }
-        this.triggeredCard = true;
-      },
-      onLeave: () => {
-        d3.select(`#${this.leadId} > svg`).remove();
-        d3.select(`#${this.stagesId} > svg`).remove();
-        d3.select(`#${this.marginId} > svg`).remove();
-        this.triggeredCard = false;
-      },
-      onEnterBack: () => {
-        if (!this.triggeredCard) {
-          this.createGraph()
-          this.createMargin()
-        }
-        this.triggeredCard = true;
-      },
-      onLeaveBack: () => {
-        d3.select(`#${this.leadId} > svg`).remove();
-        d3.select(`#${this.stagesId} > svg`).remove();
-        d3.select(`#${this.marginId} > svg`).remove();
-        this.triggeredCard = false;
-      },
-    })
+    this.flag = `assets/flags/${lookup.byCountry(this.edition?.winner.nationality).iso2}.svg`;
+    this.flagAlt = `Flag of ${this.edition?.winner.nationality}`
   }
 
   ngAfterViewInit() {
@@ -120,14 +72,23 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.finishedFirstRender = true;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges() {
+    ScrollTrigger.getAll().forEach(trigger => {
+      trigger.refresh();
+    });
+
     if (this.finishedFirstRender && this.triggeredCard) {
-      ScrollTrigger.getAll().forEach(trigger => {
-        trigger.refresh();
-      });
       d3.select(`#${this.marginId} > svg`).remove();
       this.createMargin();
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (!this.triggeredCard) return;
+
+    d3.select(`#${this.marginId} > svg`).remove();
+    this.createMargin();
   }
 
   createMargin() {
@@ -310,6 +271,61 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
 
   revealInformation() {
     this.extraInfoVisible = !this.extraInfoVisible;
+  }
+
+  private createGsapAnimations(): void {
+    if (this.movable) {
+      gsap.fromTo(
+        `#${this.cardId}`,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: `#${this.cardId}`,
+            start: "top 95%",
+            end: "bottom top",
+            toggleActions: "play reverse restart reverse",
+          },
+          duration: .1
+        }
+      );
+    }
+
+    ScrollTrigger.create({
+      trigger: `#${this.cardId}`,
+      start: "top 95%",
+      end: "bottom top",
+      onEnter: () => {
+        if (!this.triggeredCard) {
+          this.createGraph()
+          this.createMargin()
+        }
+        this.triggeredCard = true;
+      },
+      onLeave: () => {
+        d3.select(`#${this.leadId} > svg`).remove();
+        d3.select(`#${this.stagesId} > svg`).remove();
+        d3.select(`#${this.marginId} > svg`).remove();
+        this.triggeredCard = false;
+      },
+      onEnterBack: () => {
+        if (!this.triggeredCard) {
+          this.createGraph()
+          this.createMargin()
+        }
+        this.triggeredCard = true;
+      },
+      onLeaveBack: () => {
+        d3.select(`#${this.leadId} > svg`).remove();
+        d3.select(`#${this.stagesId} > svg`).remove();
+        d3.select(`#${this.marginId} > svg`).remove();
+        this.triggeredCard = false;
+      },
+    })
   }
 
   private createBaseGradient(svg) {
