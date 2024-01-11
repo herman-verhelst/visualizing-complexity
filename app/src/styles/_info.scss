@@ -13,7 +13,7 @@
     background: var(--gradient-card);
     border: 1px solid var(--color-primary-900);
     aspect-ratio: 1/1;
-    height: 10rem;
+    height: 12rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,8 +23,10 @@
 
   &__text {
     height: fit-content;
-    .title {
+
+    .subtitle {
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
 
     p {

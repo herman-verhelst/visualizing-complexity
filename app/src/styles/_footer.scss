@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid var(--color-text-1);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--color-text-grey);
+  margin-bottom: 10vh;
+
+  &__section {
+    flex: 1;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+}

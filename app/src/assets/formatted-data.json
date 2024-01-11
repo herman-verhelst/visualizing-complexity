@@ -2438,11 +2438,11 @@
     "totalStages": 21,
     "stageWins": 2,
     "stagesLed": 11,
-    "marginNumber": 0.016944444444444443,
+    "marginNumber": 0.030833,
     "margin": {
       "hours": 0,
       "minutes": 1,
-      "seconds": 1
+      "seconds": 51
     },
     "time": {
       "hours": 83,
@@ -2458,15 +2458,15 @@
   {
     "edition": "106",
     "year": "2019",
-    "distance": 3349,
+    "distance": 3366,
     "totalStages": 21,
     "stageWins": 0,
-    "stagesLed": 2,
-    "marginNumber": 0.016944444444444443,
+    "stagesLed": 3,
+    "marginNumber": 0.019722,
     "margin": {
       "hours": 0,
       "minutes": 1,
-      "seconds": 1
+      "seconds": 11
     },
     "time": {
       "hours": 82,
