@@ -50,6 +50,8 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
 
   finishedFirstRender: boolean = false;
   triggeredCard: boolean = false;
+  leadExplanationVisible: boolean = false;
+  winExplanationVisible: boolean = false;
 
   constructor(private element: ElementRef) {
   }

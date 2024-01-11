@@ -3,6 +3,22 @@
     @if (edition.multipleWins) {
       <div class="mountain__gradient" [ngStyle]="{'background': edition.backgroundGradient?.getGradient()}"></div>
     }
+    <div class="explanation__line explanation__line--h"
+         [ngClass]="{'explanation--visible': winExplanationVisible}"></div>
+    <div class="explanation__line explanation__line--v"
+         [ngClass]="{'explanation--visible': winExplanationVisible}"></div>
+    <div class="explanation explanation--wins" [ngClass]="{'explanation--visible': winExplanationVisible}">
+      Number of stage wins
+    </div>
+
+
+    <div class="explanation__line explanation__line--h explanation__line--hl"
+         [ngClass]="{'explanation--visible': leadExplanationVisible}"></div>
+    <div class="explanation__line explanation__line--v explanation__line--vl"
+         [ngClass]="{'explanation--visible':leadExplanationVisible}"></div>
+    <div class="explanation explanation--lead" [ngClass]="{'explanation--visible': leadExplanationVisible}">
+      Number of stages in lead
+    </div>
 
     <div class="mountain__transform-container">
 
@@ -10,10 +26,12 @@
         <div class="mountain__default" [ngClass]="{'mountain__default--ei-visible': !hoverable}">
           <div class="mountain__graphs">
             <div [id]="stagesId">
-              <p class="mountain__detail">{{ edition.stageWins }}</p>
+              <p class="mountain__detail" (mouseenter)="winExplanationVisible = true"
+                 (mouseleave)="winExplanationVisible = false">{{ edition.stageWins }}</p>
             </div>
             <div [id]="leadId">
-              <p class="mountain__detail">{{ edition.stagesLed }}</p>
+              <p class="mountain__detail" (mouseenter)="leadExplanationVisible = true"
+                 (mouseleave)="leadExplanationVisible = false">{{ edition.stagesLed }}</p>
             </div>
           </div>
 
