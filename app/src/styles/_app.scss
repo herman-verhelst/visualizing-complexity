@@ -172,3 +172,9 @@ svg {
   }
 }
 
+.text {
+  &--grey {
+    color: var(--color-text-grey);
+  }
+}
+

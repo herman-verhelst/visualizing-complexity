@@ -1,9 +1,10 @@
 <div class="sort__container">
   <button class="sort" (click)="openSort()">
     <span class="sort__selected-option">
-      <svg [ngClass]="{'sort__selected-option--descending': selectedDirection === SortDirection.DESCENDING}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
+      <svg [ngClass]="{'sort__selected-option--descending': selectedDirection === SortDirection.DESCENDING}"
+           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path
         d="M3.47 7.78a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018L9 4.81v7.44a.75.75 0 0 1-1.5 0V4.81L4.53 7.78a.75.75 0 0 1-1.06 0Z"></path></svg>
-      {{ selectedOption.displayName }}
+      <p [innerHTML]="selectedOption.displayName"></p>
     </span>
 
     <svg class="chevron" [ngClass]="{'chevron--up': dropdownVisible}" xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +15,7 @@
 
   </button>
 
-  <div class="dropdown__shadow" [ngClass]="{'dropdown__shadow--visible': dropdownVisible && !dropdownClosing}" >
+  <div class="dropdown__shadow" [ngClass]="{'dropdown__shadow--visible': dropdownVisible && !dropdownClosing}">
     <div class="dropdown__container">
       <div class="dropdown" [attr.aria-expanded]="dropdownVisible" [attr.hidden]="dropdownClosing">
         <div class="dropdown__options">
@@ -37,14 +38,19 @@
             <div class="radio-button" [ngClass]="{'radio-button--selected': selectedOption === SortOption.STAGES_WON}">
               <div></div>
             </div>
-            Stages won
+            <p>
+              Stage wins <span class="text--grey">(percentage)</span>
+            </p>
           </button>
           <button class="dropdown__button" (click)="changeSelectedOption(SortOption.LEADERS_JERSEY)"
                   [ngClass]="{'dropdown__button--selected': selectedOption === SortOption.LEADERS_JERSEY}">
-            <div class="radio-button" [ngClass]="{'radio-button--selected': selectedOption === SortOption.LEADERS_JERSEY}">
+            <div class="radio-button"
+                 [ngClass]="{'radio-button--selected': selectedOption === SortOption.LEADERS_JERSEY}">
               <div></div>
             </div>
-            Leaders jersey
+            <p>
+              Stages in lead <span class="text--grey">(percentage)</span>
+            </p>
           </button>
         </div>
         <div class="dropdown__order">
