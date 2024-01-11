@@ -33,15 +33,15 @@ html {
   background-image: var(--gradient-background);
   color: var(--color-text);
   min-height: 100%;
+  height: 100%;
 }
 
 body {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem 2rem;
+  padding: 2rem;
   overflow-y: scroll;
   min-height: 100%;
-  height: 100%;
 }
 
 p, h1, h2, h3 {
@@ -143,10 +143,17 @@ svg {
 }
 
 .app {
+  min-height: calc(100vh - 2rem);
+  display: block;
+
+  &__main {
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    height: fit-content;
   }
 
   &__mountains {
