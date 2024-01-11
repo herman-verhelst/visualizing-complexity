@@ -1,84 +1,59 @@
-<section class="info__container">
-  <div class="info">
-    <img class="info__logo" src="/assets/logo-tdf.svg" alt="Logo Tour de France">
-    <div class="info__text">
-      <h1 class="title">Summiting success</h1>
-      <p class="subtitle">Measuring dominance during the Tour de France</p>
-      <p>
-        To gauge the extent of the Tour de France winner's dominance,
-        one can analyze various statistics such as the margin the winner maintained over the second-place rider in the
-        general classification,
-        the number of stages in which they wore the leader's jersey,
-        and the frequency of their stage victories.
-        These metrics collectively reveal the level of dominance exhibited by the Tour de France champion.
-      </p>
+<div class="app__main">
+  <section class="info__container">
+    <div class="info">
+      <img class="info__logo" src="/assets/logo-tdf.svg" alt="Logo Tour de France">
+      <div class="info__text">
+        <h1 class="title">Summiting success</h1>
+        <p class="subtitle">Measuring dominance during the Tour de France</p>
+        <p>
+          To gauge the extent of the Tour de France winner's dominance,
+          one can analyze various statistics such as the margin the winner maintained over the second-place rider in the
+          general classification,
+          the number of stages in which they wore the leader's jersey,
+          and the frequency of their stage victories.
+          These metrics collectively reveal the level of dominance exhibited by the Tour de France champion.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-@if (editions.length > 0) {
+  @if (editions.length > 0) {
 
-  <div class="app__container">
-    <div class="filters">
-      <app-search class="filters__search" [selectedEditions]="selectedEditions"></app-search>
-      <app-sort class="filters__sort"></app-sort>
-    </div>
+    <div class="app__container">
+      <div class="filters">
+        <app-search class="filters__search" [selectedEditions]="selectedEditions"></app-search>
+        <app-sort class="filters__sort"></app-sort>
+      </div>
 
-    <div class="selected-edition__container">
-      @for (selectedEdition of selectedEditions;track selectedEdition.edition) {
-        @if (selectedEdition.selected) {
-          <app-selected-edition [selectedEdition]="selectedEdition"></app-selected-edition>
+      <div class="selected-edition__container">
+        @for (selectedEdition of selectedEditions;track selectedEdition.edition) {
+          @if (selectedEdition.selected) {
+            <app-selected-edition [selectedEdition]="selectedEdition"></app-selected-edition>
+          }
         }
+      </div>
+
+      <div class="app__mountains">
+        @for (edition of editions | sort:changeCount:sort:selectedEditions;track edition.edition) {
+          <app-mountain [changeCount]="changeCount" [edition]="edition" [margins]="margins"></app-mountain>
+        }
+      </div>
+
+      <button class="help__button" (click)="openModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+          <path
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+        </svg>
+      </button>
+
+      @if (helpOpen) {
+        <app-help (closeModalEvent)="closeModal()" [lastEdition]="lastEdition" [visible]="true"></app-help>
       }
     </div>
-
-    <div class="app__mountains">
-      @for (edition of editions | sort:changeCount:sort:selectedEditions;track edition.edition) {
-        <app-mountain [changeCount]="changeCount" [edition]="edition" [margins]="margins"></app-mountain>
-      }
+  } @else {
+    <div class="app__loading-container">
+      <app-loading-animation></app-loading-animation>
     </div>
-
-    <button class="help__button" (click)="openModal()">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-        <path
-          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
-      </svg>
-    </button>
-
-    @if (helpOpen) {
-      <app-help (closeModalEvent)="closeModal()" [lastEdition]="lastEdition" [visible]="true"></app-help>
-    }
-  </div>
-} @else {
-  <div class="app__loading-container">
-    <app-loading-animation></app-loading-animation>
-  </div>
-}
-
-<footer class="footer">
-  <section class="footer__section">
-    <h3 class="footer__title">Assignment</h3>
-    <p>This data visualisation was created during an assignment for the course <i>Visualising complexity</i> in the
-      second bachelor year of the program <a
-        href="https://luca-arts.be/en/bachelor-exchange-programme-graphic-design-media-information-design-campus-sint-lukas-brussels">Media
-        & Information Design</a> at Luca | School of Arts</p>
-  </section>
-
-  <section class="footer__section">
-    <h3 class="footer__title">Data</h3>
-    <p>
-      Editions till 2017: <a
-      href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-07/readme.md" target="_blank">Tidy
-      Tuesday | Tour de France</a>
-    </p>
-    <p>
-      Last editions: <a href="https://www.letour.fr/en/history" target="_blank">Tour de France | History</a>
-    </p>
-  </section>
-
-  <section class="footer__section">
-    <h3 class="footer__title">Design and development</h3>
-    <p><a href="herman-verhelst.github.io/portfolio" target="_blank">Herman Verhelst</a></p>
-  </section>
-</footer>
+  }
+</div>
