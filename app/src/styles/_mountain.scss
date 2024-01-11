@@ -90,6 +90,7 @@
     box-shadow: var(--shadow-mountain);
     transition: var(--transition) opacity;
     z-index: 2;
+    cursor: pointer;
 
     &--margin {
       left: 11rem;
@@ -193,5 +194,55 @@
 
   &__lastname {
     font-weight: 700;
+  }
+}
+
+.explanation {
+  position: absolute;
+  left: 6rem;
+  bottom: .1rem;
+  z-index: 100;
+  font-size: .8rem;
+  line-height: .8rem;
+  opacity: 0;
+  transition: var(--transition) opacity;
+
+  &--visible {
+    opacity: 1 !important;
+  }
+
+  &--lead {
+    left: 9rem;
+  }
+
+  &__line {
+    position: absolute;
+    opacity: 0;
+    transition: var(--transition) opacity;
+
+    &--h {
+      left: 4.5rem;
+      bottom: .5rem;
+      height: .5px;
+      width: 1rem;
+      background-color: var(--color-text);
+
+      &l {
+        left: 7.5rem;
+      }
+    }
+
+    &--v {
+      left: 4.5rem;
+      bottom: .5rem;
+      height: 1rem;
+      width: .5px;
+      background-color: var(--color-text);
+      z-index: 100;
+
+      &l {
+        left: 7.5rem;
+      }
+    }
   }
 }
