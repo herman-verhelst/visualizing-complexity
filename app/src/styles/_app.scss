@@ -12,6 +12,8 @@
   --color-primary-300: #67645C;
 
   --color-text: #F7F5EF;
+  --color-text-1: rgba(247, 245, 240, 0.1);
+  --color-text-grey: #b4b3b1;
 
   --gradient-background: linear-gradient(180deg, var(--color-background-900) 0%, var(--color-background-800) 100%);
   --gradient-card: linear-gradient(180deg, var(--color-card-900) 0%, var(--color-card-800) 100%);
@@ -47,7 +49,7 @@ p, h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: .2rem;
   text-transform: uppercase;
