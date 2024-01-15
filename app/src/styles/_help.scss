@@ -18,6 +18,7 @@
   &__info {
     &--mountains {
       margin-left: 12rem;
+      max-width: 40rem;
     }
 
     &--bottom {
@@ -34,7 +35,7 @@
 
     &--road, &--color {
       width: 100%;
-      max-width: 20rem;
+      max-width: 22rem;
     }
   }
 }

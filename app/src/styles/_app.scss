@@ -30,7 +30,6 @@ html {
   font-family: 'Titillium Web', sans-serif;
   font-size: 14px;
   background-color: var(--color-background-900);
-  background-image: var(--gradient-background);
   color: var(--color-text);
   min-height: 100%;
   height: 100%;
@@ -115,6 +114,7 @@ h2 {
 
 input {
   width: 100%;
+  height: 100%;
   border-radius: .5rem;
   background-color: transparent;
   padding: 1rem 1.5rem 1rem 3.75rem;
@@ -145,9 +145,6 @@ svg {
 .app {
   min-height: calc(100vh - 2rem);
   display: block;
-
-  &__main {
-  }
 
   &__container {
     display: flex;
