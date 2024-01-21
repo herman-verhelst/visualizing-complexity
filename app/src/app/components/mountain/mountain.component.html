@@ -28,11 +28,11 @@
       <div class="mountain__container" [ngClass]="{'extra-information--visible': extraInfoVisible}">
         <div class="mountain__default" [ngClass]="{'mountain__default--ei-visible': !hoverable}">
           <div class="mountain__graphs">
-            <div [id]="stagesId"  (mouseenter)="winExplanationVisible = true"
+            <div [id]="stagesId" (mouseenter)="winExplanationVisible = true"
                  (mouseleave)="winExplanationVisible = false">
               <p class="mountain__detail">{{ edition.stageWins }}</p>
             </div>
-            <div [id]="leadId"  (mouseenter)="leadExplanationVisible = true"
+            <div [id]="leadId" (mouseenter)="leadExplanationVisible = true"
                  (mouseleave)="leadExplanationVisible = false">
               <p class="mountain__detail">{{ edition.stagesLed }}</p>
             </div>
@@ -89,16 +89,21 @@
             </div>
 
             <div class="extra-information__container">
-              <div class="flex">
-                <p class="label">Total time</p>
-                <p class="value">{{ edition.time.hours }}h {{ edition.time.minutes }}min {{ edition.time.seconds }}
-                  s </p>
-              </div>
+              @if (averageSpeed > 0) {
+                <div class="flex">
+                  <p class="label">Total time</p>
+                  <p class="value">
+                    {{ edition.time.hours }}h {{ edition.time.minutes }}min {{ edition.time.seconds }}
+                    s </p>
+                </div>
 
-              <div class="flex">
-                <p class="label">Average speed</p>
-                <p class="value">{{ edition.distance }}</p>
-              </div>
+                <div class="flex">
+                  <p class="label">Average speed</p>
+                  <p class="value">
+                    {{ averageSpeed }} km/u
+                  </p>
+                </div>
+              }
             </div>
           </div>
         }

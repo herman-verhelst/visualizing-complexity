@@ -2,7 +2,7 @@
 import {AfterViewInit, Component, ElementRef, HostListener, Input, OnChanges, OnInit} from '@angular/core';
 import {Edition} from "../../models/edition";
 import * as d3 from 'd3';
-import {convertRemToPixels} from "../../utils/units";
+import {calculateAverageSpeed, convertRemToPixels} from "../../utils/units";
 import {NgClass, NgStyle} from "@angular/common";
 import {v4 as uuidv4} from 'uuid';
 import gsap from 'gsap';
@@ -53,6 +53,8 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
   leadExplanationVisible: boolean = false;
   winExplanationVisible: boolean = false;
 
+  averageSpeed: number = 0;
+
   constructor(private element: ElementRef) {
   }
 
@@ -64,7 +66,9 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
     this.cardId = `card-${uuid}`;
 
     this.flag = `assets/flags/${lookup.byCountry(this.edition?.winner.nationality).iso2}.svg`;
-    this.flagAlt = `Flag of ${this.edition?.winner.nationality}`
+    this.flagAlt = `Flag of ${this.edition?.winner.nationality}`;
+    
+    this.averageSpeed = this.edition?.time.hours ? Math.round(calculateAverageSpeed(this.edition) * 100) / 100 : 0;
   }
 
   ngAfterViewInit() {
