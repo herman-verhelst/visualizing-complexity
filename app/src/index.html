@@ -4,52 +4,86 @@
   <meta charset="utf-8">
   <title>Summiting success</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta property="og:locale" content="en_BE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Summiting success: measuring dominance in the Tour de France">
+  <meta property="og:description" content="We can measure the level of dominance exhibited by the Tour de France champion by analysing various statistics such as the number of their stage victories, the number of stages in which they wore the leader's jersey, and the margin the winner maintained over the second-place rider in the general classification.">
+  <meta property="og:url" content="https://summiting-success.herman-verhelst.be/">
+  <meta property="og:image" content="https://summiting-success.herman-verhelst.be/assets/preview-img.png">
+
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GER48D322N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
   gtag('js', new Date());
 
   gtag('config', 'G-GER48D322N');
 </script>
 
 <body>
-  <app-root class="app"></app-root>
-
-  <footer class="footer">
-    <section class="footer__section">
-      <h3 class="footer__title">Assignment</h3>
-      <p>This data visualisation was created during an assignment for the course <i>Visualising complexity</i> in the
-        second bachelor year of the program <a
-          href="https://luca-arts.be/en/bachelor-exchange-programme-graphic-design-media-information-design-campus-sint-lukas-brussels">Media
-          & Information Design</a> at Luca | School of Arts</p>
-    </section>
-
-    <section class="footer__section">
-      <h3 class="footer__title">Data</h3>
+<header class="info__container">
+  <div class="info">
+    <div class="info__logo">
+      <img src="/assets/logo.svg" alt="Logo Summiting success">
+      <div class="divider"></div>
+      <img alt="Logo Tour de France" src="/assets/logo-tdf.svg">
+    </div>
+    <div class="info__text">
+      <h1 class="title">Summiting success</h1>
+      <p class="subtitle">Measuring dominance in the Tour de France</p>
       <p>
-        Editions till 2017: <a
-        href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-07/readme.md" target="_blank">Tidy
-        Tuesday | Tour de France</a>
+        To gauge the extent of the Tour de France winners dominance,
+        one can analyse various statistics such as the number of their stage victories,
+        the number of stages in which they wore the leader's jersey,
+        and the margin the winner maintained over the second-place rider in the general classification.
+        These metrics collectively reveal the level of dominance exhibited by the Tour de France champion.
       </p>
-      <p>
-        Last editions: <a href="https://www.letour.fr/en/history" target="_blank">Tour de France | History</a>
-      </p>
-    </section>
+    </div>
+  </div>
+</header>
 
-    <section class="footer__section">
-      <h3 class="footer__title">Design and development</h3>
-      <p><a href="herman-verhelst.github.io/portfolio" target="_blank">Herman Verhelst</a></p>
-    </section>
-  </footer>
+<app-root class="app"></app-root>
+
+<footer class="footer">
+  <section class="footer__section">
+    <h3 class="footer__title">Assignment</h3>
+    <p>This data visualisation was created during an assignment for the course <i>Visualising complexity</i> in the
+      second bachelor year of the program <a
+        href="https://luca-arts.be/en/bachelor-exchange-programme-graphic-design-media-information-design-campus-sint-lukas-brussels"
+        target="_blank">Media
+        & Information Design</a> at Luca | School of Arts</p>
+  </section>
+
+  <section class="footer__section">
+    <h3 class="footer__title">Data</h3>
+    <p>
+      Editions till 2017: <a
+      href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-04-07/readme.md" target="_blank">Tidy
+      Tuesday | Tour de France</a>
+    </p>
+    <p>
+      Last editions: <a href="https://www.letour.fr/en/history" target="_blank">Tour de France | History</a>
+    </p>
+  </section>
+
+  <section class="footer__section">
+    <h3 class="footer__title">Design and development</h3>
+    <p><a href="https://herman-verhelst.github.io/portfolio" target="_blank">Herman Verhelst</a></p>
+  </section>
+</footer>
 
 </body>
 </html>

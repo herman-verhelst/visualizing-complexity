@@ -90,7 +90,7 @@
     box-shadow: var(--shadow-mountain);
     transition: var(--transition) opacity;
     z-index: 2;
-    cursor: pointer;
+    cursor: default;
 
     &--margin {
       left: 11rem;

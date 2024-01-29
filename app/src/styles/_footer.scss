@@ -11,6 +11,12 @@
 
     a {
       text-decoration: underline;
+      transition: var(--transition) color;
+
+      &:focus-visible, &:hover {
+        color: var(--color-text);
+        outline: none;
+      }
     }
   }
 

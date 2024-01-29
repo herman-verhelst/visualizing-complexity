@@ -3,35 +3,38 @@
     @if (edition.multipleWins) {
       <div class="mountain__gradient" [ngStyle]="{'background': edition.backgroundGradient?.getGradient()}"></div>
     }
-    <div class="explanation__line explanation__line--h"
-         [ngClass]="{'explanation--visible': winExplanationVisible}"></div>
-    <div class="explanation__line explanation__line--v"
-         [ngClass]="{'explanation--visible': winExplanationVisible}"></div>
-    <div class="explanation explanation--wins" [ngClass]="{'explanation--visible': winExplanationVisible}">
-      Number of stage wins
-    </div>
+
+    @if (movable) {
+      <div class="explanation__line explanation__line--h"
+           [ngClass]="{'explanation--visible': winExplanationVisible}"></div>
+      <div class="explanation__line explanation__line--v"
+           [ngClass]="{'explanation--visible': winExplanationVisible}"></div>
+      <div class="explanation explanation--wins" [ngClass]="{'explanation--visible': winExplanationVisible}">
+        Number of stage wins
+      </div>
 
 
-    <div class="explanation__line explanation__line--h explanation__line--hl"
-         [ngClass]="{'explanation--visible': leadExplanationVisible}"></div>
-    <div class="explanation__line explanation__line--v explanation__line--vl"
-         [ngClass]="{'explanation--visible':leadExplanationVisible}"></div>
-    <div class="explanation explanation--lead" [ngClass]="{'explanation--visible': leadExplanationVisible}">
-      Number of stages in lead
-    </div>
+      <div class="explanation__line explanation__line--h explanation__line--hl"
+           [ngClass]="{'explanation--visible': leadExplanationVisible}"></div>
+      <div class="explanation__line explanation__line--v explanation__line--vl"
+           [ngClass]="{'explanation--visible':leadExplanationVisible}"></div>
+      <div class="explanation explanation--lead" [ngClass]="{'explanation--visible': leadExplanationVisible}">
+        Number of stages in lead
+      </div>
+    }
 
     <div class="mountain__transform-container">
 
       <div class="mountain__container" [ngClass]="{'extra-information--visible': extraInfoVisible}">
         <div class="mountain__default" [ngClass]="{'mountain__default--ei-visible': !hoverable}">
           <div class="mountain__graphs">
-            <div [id]="stagesId">
-              <p class="mountain__detail" (mouseenter)="winExplanationVisible = true"
-                 (mouseleave)="winExplanationVisible = false">{{ edition.stageWins }}</p>
+            <div [id]="stagesId" (mouseenter)="winExplanationVisible = true"
+                 (mouseleave)="winExplanationVisible = false">
+              <p class="mountain__detail">{{ edition.stageWins }}</p>
             </div>
-            <div [id]="leadId">
-              <p class="mountain__detail" (mouseenter)="leadExplanationVisible = true"
-                 (mouseleave)="leadExplanationVisible = false">{{ edition.stagesLed }}</p>
+            <div [id]="leadId" (mouseenter)="leadExplanationVisible = true"
+                 (mouseleave)="leadExplanationVisible = false">
+              <p class="mountain__detail">{{ edition.stagesLed }}</p>
             </div>
           </div>
 
@@ -86,16 +89,21 @@
             </div>
 
             <div class="extra-information__container">
-              <div class="flex">
-                <p class="label">Total time</p>
-                <p class="value">{{ edition.time.hours }}h {{ edition.time.minutes }}min {{ edition.time.seconds }}
-                  s </p>
-              </div>
+              @if (averageSpeed > 0) {
+                <div class="flex">
+                  <p class="label">Total time</p>
+                  <p class="value">
+                    {{ edition.time.hours }}h {{ edition.time.minutes }}min {{ edition.time.seconds }}
+                    s </p>
+                </div>
 
-              <div class="flex">
-                <p class="label">Average speed</p>
-                <p class="value">{{ edition.distance }}</p>
-              </div>
+                <div class="flex">
+                  <p class="label">Average speed</p>
+                  <p class="value">
+                    {{ averageSpeed }} km/u
+                  </p>
+                </div>
+              }
             </div>
           </div>
         }
