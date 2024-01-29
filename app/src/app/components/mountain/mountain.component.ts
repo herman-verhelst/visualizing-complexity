@@ -67,7 +67,7 @@ export class MountainComponent implements OnInit, AfterViewInit, OnChanges {
 
     this.flag = `assets/flags/${lookup.byCountry(this.edition?.winner.nationality).iso2}.svg`;
     this.flagAlt = `Flag of ${this.edition?.winner.nationality}`;
-    
+
     this.averageSpeed = this.edition?.time.hours ? Math.round(calculateAverageSpeed(this.edition) * 100) / 100 : 0;
   }
 
