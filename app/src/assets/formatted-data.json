@@ -2574,5 +2574,53 @@
       "nationality": "Denmark",
       "team": "Jumbo - Visma"
     }
+  },
+  {
+    "edition": "111",
+    "year": "2024",
+    "distance": 3498,
+    "totalStages": 21,
+    "stageWins": 6,
+    "stagesLed": 19,
+    "marginNumber": 0.1047222222,
+    "margin": {
+      "hours": 0,
+      "minutes": 6,
+      "seconds": 17
+    },
+    "time": {
+      "hours": 83,
+      "minutes": 38,
+      "seconds": 56
+    },
+    "winner": {
+      "name": "Tadej Pogačar",
+      "nationality": "Slovenia",
+      "team": "UAE Team Emirates"
+    }
+  },
+  {
+    "edition": "112",
+    "year": "2025",
+    "distance": 3299,
+    "totalStages": 21,
+    "stageWins": 4,
+    "stagesLed": 14,
+    "marginNumber": 0.0733333333,
+    "margin": {
+      "hours": 0,
+      "minutes": 4,
+      "seconds": 24
+    },
+    "time": {
+      "hours": 76,
+      "minutes": 0,
+      "seconds": 32
+    },
+    "winner": {
+      "name": "Tadej Pogačar",
+      "nationality": "Slovenia",
+      "team": "UAE Team Emirates - XRG"
+    }
   }
 ]
